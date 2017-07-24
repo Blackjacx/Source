@@ -8,25 +8,20 @@
 
 import Foundation
 
-protocol Section {
+public protocol Section {
 
     var sortOrder: Int { get }
     var items: [Item] { get set }
     var headerTitle: String? { get }
     var footerTitle: String? { get }
+    var count: Int { get }
 }
 
 extension Section {
 
-    var count: Int { return items.count }
+    public var count: Int { return items.count }
 
-    subscript(index: Int) -> Item {
-        get {
-            return items[index]
-        }
-
-        set(newValue) {
-            items[index] = newValue
-        }
+    public subscript(index: Int) -> Item {
+        return items[index]
     }
 }

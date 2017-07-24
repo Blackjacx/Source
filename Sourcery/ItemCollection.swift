@@ -8,10 +8,9 @@
 
 import Foundation
 
-struct ItemCollection {
+public struct ItemCollection {
 
-    private let collation = UILocalizedIndexedCollation.current()
-    private var sections: [Section] = []
+    private var sections: [Section]
 
     var sectionsWithIndexTitles: [(section: Int, indexTitle: String)] {
         return sections.enumerated().flatMap {
@@ -20,30 +19,33 @@ struct ItemCollection {
         }
     }
 
-    func sectionCount() -> Int {
-        return sections.count
-    }
-
-    func rowsForSection(_ section: Int) -> Int {
-        return sections[section].count
-    }
-
-    func itemAtIndexPath(_ indexPath: IndexPath) -> Item {
-        return sections[indexPath.section][indexPath.row]
+    public init(with initialSections: [Section] = []) {
+        sections = initialSections
     }
 }
 
 extension ItemCollection {
-
-    subscript(index: Int) -> Section {
-
-        get { return sections[index] }
-        set(newValue) { sections[index] = newValue }
+    
+    public func sectionCount() -> Int {
+        return sections.count
     }
 
-    subscript(indexPath: IndexPath) -> Item {
+    public func rowsForSection(_ section: Int) -> Int {
+        return sections[section].count
+    }
 
-        get { return sections[indexPath.section][indexPath.row] }
-        set(newValue) { sections[indexPath.section][indexPath.row] = newValue }
+    public mutating func addSection(_ section: Section) {
+
+        sections.append(section)
+    }
+
+    public subscript(index: Int) -> Section {
+
+        return sections[index]
+    }
+
+    public subscript(indexPath: IndexPath) -> Item {
+
+        return sections[indexPath.section][indexPath.row]
     }
 }

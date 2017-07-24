@@ -106,12 +106,12 @@
 		B9AF08201F251C3C004EDBC7 /* Sourcery */ = {
 			isa = PBXGroup;
 			children = (
-				B9AF08211F251C3C004EDBC7 /* Sourcery.h */,
-				B9AF08221F251C3C004EDBC7 /* Info.plist */,
 				B98BA3A51F2558DE003971A4 /* Configurable.swift */,
+				B9AF08221F251C3C004EDBC7 /* Info.plist */,
 				B98BA39D1F253989003971A4 /* Item.swift */,
 				B98BA3A71F255AB0003971A4 /* ItemCollection.swift */,
 				B9B786F11F26514400AE4609 /* Section.swift */,
+				B9AF08211F251C3C004EDBC7 /* Sourcery.h */,
 				B98BA3991F253540003971A4 /* Sourcery.swift */,
 			);
 			path = Sourcery;

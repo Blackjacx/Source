@@ -1,14 +1,15 @@
 //
-//  Configurable.swift
-//  Sourcery
+//  MyItem.swift
+//  iOS Example
 //
 //  Created by Stefan Herold on 24.07.17.
 //  Copyright © 2017 CodingCobra. All rights reserved.
 //
 
 import Foundation
+import Sourcery
 
-public protocol Configurable {
+struct MyItem: Item {
 
-    func configureWithItem(_ item: Item) throws
+    var title: String
 }

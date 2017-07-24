@@ -8,9 +8,39 @@
 
 import UIKit
 
+public enum SourceryError: Error {
+
+    case invalidItem(String)
+    case configurableExpected(String)
+}
+
 public class Sourcery: NSObject {
 
-    var collection: ItemCollection = ItemCollection()
+    public var collection: ItemCollection = ItemCollection() {
+
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    public var useSectionIndexTitles = true {
+
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
+    let tableView: UITableView
+
+    @available(*, unavailable, message:"init() has not been implemented")
+    override init() {
+        fatalError()
+    }
+
+    public init(with table: UITableView) {
+        tableView = table
+        super.init()
+    }
 }
 
 extension Sourcery: UITableViewDataSource {
@@ -28,7 +58,14 @@ extension Sourcery: UITableViewDataSource {
         let item = collection[indexPath]
         let cell = tableView.dequeueReusableCell(withIdentifier: item.reuseIdentifier, for: indexPath)
 
-        (cell as? Configurable)?.configureWithItem(item)
+        do {
+            guard let configurable = cell as? Configurable else {
+                throw SourceryError.configurableExpected("\(type(of: cell)) expected to confirm to Configurable!")
+            }
+            try configurable.configureWithItem(item)
+        } catch {
+            assertionFailure("\(error)")
+        }
 
         return cell
     }
@@ -42,6 +79,7 @@ extension Sourcery: UITableViewDataSource {
     }
 
     public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        guard useSectionIndexTitles else {return nil}
         return collection.sectionsWithIndexTitles.flatMap { $0.indexTitle }
     }
 
