@@ -15,6 +15,7 @@
 		B9AF08281F251C3C004EDBC7 /* Sourcery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AF081E1F251C3C004EDBC7 /* Sourcery.framework */; };
 		B9AF082D1F251C3C004EDBC7 /* SourceryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF082C1F251C3C004EDBC7 /* SourceryTests.swift */; };
 		B9AF082F1F251C3C004EDBC7 /* Sourcery.h in Headers */ = {isa = PBXBuildFile; fileRef = B9AF08211F251C3C004EDBC7 /* Sourcery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9B786F21F26514400AE4609 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B786F11F26514400AE4609 /* Section.swift */; };
 		CBCE9DC256E058283DF77666 /* Pods_Sourcery_SourceryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88CB5ED21812653160C09C1 /* Pods_Sourcery_SourceryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		B9AF08271F251C3C004EDBC7 /* SourceryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SourceryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9AF082C1F251C3C004EDBC7 /* SourceryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryTests.swift; sourceTree = "<group>"; };
 		B9AF082E1F251C3C004EDBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B786F11F26514400AE4609 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		D88CB5ED21812653160C09C1 /* Pods_Sourcery_SourceryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sourcery_SourceryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFDA7C537957827DF90F15F /* Pods-Sourcery-SourceryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcery-SourceryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcery-SourceryTests/Pods-Sourcery-SourceryTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8398DC3A6D8A2F3BB0997E3 /* Pods-Sourcery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcery.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcery/Pods-Sourcery.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				B98BA3A51F2558DE003971A4 /* Configurable.swift */,
 				B98BA39D1F253989003971A4 /* Item.swift */,
 				B98BA3A71F255AB0003971A4 /* ItemCollection.swift */,
+				B9B786F11F26514400AE4609 /* Section.swift */,
 				B98BA3991F253540003971A4 /* Sourcery.swift */,
 			);
 			path = Sourcery;
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B786F21F26514400AE4609 /* Section.swift in Sources */,
 				B98BA39E1F253989003971A4 /* Item.swift in Sources */,
 				B98BA3A61F2558DE003971A4 /* Configurable.swift in Sources */,
 				B98BA3A81F255AB0003971A4 /* ItemCollection.swift in Sources */,

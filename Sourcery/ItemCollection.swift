@@ -10,17 +10,40 @@ import Foundation
 
 struct ItemCollection {
 
-    var collection: [[Item]] = []
+    private let collation = UILocalizedIndexedCollation.current()
+    private var sections: [Section] = []
+
+    var sectionsWithIndexTitles: [(section: Int, indexTitle: String)] {
+        return sections.enumerated().flatMap {
+            guard let title = $0.element.headerTitle else {return nil}
+            return ($0.offset, title)
+        }
+    }
 
     func sectionCount() -> Int {
-        return collection.count
+        return sections.count
     }
 
     func rowsForSection(_ section: Int) -> Int {
-        return collection[section].count
+        return sections[section].count
     }
 
     func itemAtIndexPath(_ indexPath: IndexPath) -> Item {
-        return collection[indexPath.section][indexPath.row]
+        return sections[indexPath.section][indexPath.row]
+    }
+}
+
+extension ItemCollection {
+
+    subscript(index: Int) -> Section {
+
+        get { return sections[index] }
+        set(newValue) { sections[index] = newValue }
+    }
+
+    subscript(indexPath: IndexPath) -> Item {
+
+        get { return sections[indexPath.section][indexPath.row] }
+        set(newValue) { sections[indexPath.section][indexPath.row] = newValue }
     }
 }

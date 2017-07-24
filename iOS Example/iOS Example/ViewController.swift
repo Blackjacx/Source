@@ -13,8 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(MyItem().reuseIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
