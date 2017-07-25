@@ -12,4 +12,5 @@ import Sourcery
 struct MyItem: Item {
 
     var title: String
+    var cellClass: AnyClass { return MyConfigurableCell.self }
 }

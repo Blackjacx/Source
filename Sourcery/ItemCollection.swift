@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct ItemCollection {
 
@@ -47,5 +48,10 @@ extension ItemCollection {
     public subscript(indexPath: IndexPath) -> Item {
 
         return sections[indexPath.section][indexPath.row]
+    }
+
+    func registerCellsInTableView(_ table: UITableView) {
+
+        sections.flatMap { $0.items }.forEach { table.register($0.cellClass, forCellReuseIdentifier: $0.reuseIdentifier) }
     }
 }

@@ -17,9 +17,12 @@ class ViewController: UIViewController {
     }()
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         let sections = [
+            MySection(sortOrder: 0, items: [MyItem(title: "A"), MyItem(title: "B"), MyItem(title: "C")], headerTitle: nil, footerTitle: nil),
+
             MySection(sortOrder: 0, items: [MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother"), MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother"), MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother"), MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother")], headerTitle: "Family", footerTitle: nil),
             
             MySection(sortOrder: 0, items: [MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape")], headerTitle: "Fruits", footerTitle: nil),
@@ -32,7 +35,6 @@ class ViewController: UIViewController {
 
         dataSource.collection = ItemCollection(with: sections)
 
-        table.register(MyConfigurableCell.self, forCellReuseIdentifier: sections[0][0].reuseIdentifier)
         table.dataSource = dataSource
         table.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(table)

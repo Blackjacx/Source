@@ -19,6 +19,7 @@ public class Sourcery: NSObject {
     public var collection: ItemCollection = ItemCollection() {
 
         didSet {
+            collection.registerCellsInTableView(tableView)
             tableView.reloadData()
         }
     }

@@ -11,6 +11,7 @@ import Foundation
 public protocol Item {
 
     var reuseIdentifier: String { get }
+    var cellClass: AnyClass { get }
 }
 
 public extension Item {
