@@ -10,7 +10,6 @@ import Foundation
 
 public protocol Section {
 
-    var sortOrder: Int { get }
     var items: [Item] { get set }
     var headerTitle: String? { get }
     var footerTitle: String? { get }

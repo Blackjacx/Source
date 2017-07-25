@@ -11,8 +11,6 @@ import Sourcery
 
 struct MySection: Section {
 
-    var sortOrder: Int = 0
-
     var items: [Item]
 
     var headerTitle: String?
