@@ -20,7 +20,13 @@ class SingleSectionViewController: UIViewController {
         
         super.viewDidLoad()
 
-        let items = [MyItem(title: "Einstellungen"), MyItem(title: "Impressung"), MyItem(title: "Empfehlen"), MyItem(title: "Hilfe"), MyItem(title: "Logout")]
+        var items = [MyItem(title: "Einstellungen"), MyItem(title: "Impressung"), MyItem(title: "Empfehlen"), MyItem(title: "Hilfe"), MyItem(title: "Logout")]
+
+        // Changing the connected cell class for all items. Alternatively you can just create a new item and set another default cell type.
+        for index in 0..<items.count {
+            items[index].cellClass = MyDisclosureCell.self
+        }
+
         let section = MySection(items: items, headerTitle: nil, footerTitle: nil)
         dataSource.collection = ItemCollection(with: [section])
         table.dataSource = dataSource

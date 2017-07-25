@@ -12,5 +12,12 @@ import Sourcery
 struct MyItem: Item {
 
     var title: String
-    var cellClass: AnyClass { return MyConfigurableCell.self }
+    var cellClass: AnyClass = MyConfigurableCell.self
+}
+
+extension MyItem {
+
+    init(title: String) {
+        self.title = title
+    }
 }
