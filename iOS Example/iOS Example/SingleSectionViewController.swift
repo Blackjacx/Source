@@ -21,11 +21,11 @@ class SingleSectionViewController: UIViewController {
         super.viewDidLoad()
 
         var items = [
-            MyItem(title: "Einstellungen"),
-            MyItem(title: "Impressung"),
-            MyItem(title: "Empfehlen"),
-            MyItem(title: "Hilfe"),
-            MyItem(title: "Logout")
+            MyItem(title: "Einstellungen", action:{ print("Einstellungen") }),
+            MyItem(title: "Impressung", action:{ print("Impressum") }),
+            MyItem(title: "Empfehlen", action:{ print("Empfehlen") }),
+            MyItem(title: "Hilfe", action:{ print("Hilfe") }),
+            MyItem(title: "Logout", action:{ print("Logout") })
         ]
 
         // Changing the connected cell class for all items. Alternatively you can just create a new item and set another default cell type.
@@ -37,6 +37,7 @@ class SingleSectionViewController: UIViewController {
         dataSource.collection = ItemCollection(with: [section])
         table.dataSource = dataSource
 
+        table.delegate = self
         table.tableFooterView = UIView()
         table.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(table)
@@ -56,3 +57,11 @@ class SingleSectionViewController: UIViewController {
     }
 }
 
+extension SingleSectionViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = dataSource.collection[indexPath]
+        item.action?()
+    }
+}

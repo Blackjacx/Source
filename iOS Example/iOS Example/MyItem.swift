@@ -13,11 +13,13 @@ struct MyItem: Item {
 
     var title: String
     var cellClass: AnyClass = MyConfigurableCell.self
+    var action: CellAction?
 }
 
 extension MyItem {
 
-    init(title: String) {
+    init(title: String, action: CellAction? = nil) {
         self.title = title
+        self.action = action
     }
 }

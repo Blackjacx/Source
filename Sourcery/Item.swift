@@ -8,10 +8,13 @@
 
 import Foundation
 
+public typealias CellAction = () -> Void
+
 public protocol Item {
 
-    var reuseIdentifier: String { get }
-    var cellClass: AnyClass { get }
+    var reuseIdentifier: String {get}
+    var cellClass: AnyClass {get}
+    var action: CellAction? {get}
 }
 
 public extension Item {
