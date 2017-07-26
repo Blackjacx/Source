@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Sourcery
+import Source
 
 struct MySection: Section {
 

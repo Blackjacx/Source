@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Sourcery
+import Source
 
 class SimpleExampleViewController: UIViewController {
 
     let table = UITableView()
-    lazy var dataSource: Sourcery = {
-        return Sourcery(with: table)
+    lazy var dataSource: Source = {
+        return Source(with: table)
     }()
 
     override func viewDidLoad() {

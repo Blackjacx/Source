@@ -1,15 +1,15 @@
 //
-//  SourceryTests.swift
-//  SourceryTests
+//  SourceTests.swift
+//  SourceTests
 //
 //  Created by Stefan Herold on 23.07.17.
 //  Copyright © 2017 CodingCobra. All rights reserved.
 //
 
 import XCTest
-@testable import Sourcery
+@testable import Source
 
-class SourceryTests: XCTestCase {
+class SourceTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Sourcery
+import Source
 
 class MyDisclosureCell: UITableViewCell, Reusable {
 }
@@ -16,7 +16,7 @@ extension MyDisclosureCell: Configurable {
 
     func configureWithItem(_ item: Item) throws {
 
-        guard let myItem = item as? MyItem else { throw SourceryError.invalidItem("\(item)") }
+        guard let myItem = item as? MyItem else { throw SourceError.invalidItem("\(item)") }
 
         accessoryType = .disclosureIndicator
         textLabel?.text = myItem.title

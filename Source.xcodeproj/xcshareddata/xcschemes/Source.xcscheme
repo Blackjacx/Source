@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B9AF081D1F251C3C004EDBC7"
-               BuildableName = "Sourcery.framework"
-               BlueprintName = "Sourcery"
-               ReferencedContainer = "container:Sourcery.xcodeproj">
+               BuildableName = "Source.framework"
+               BlueprintName = "Source"
+               ReferencedContainer = "container:Source.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B9AF08261F251C3C004EDBC7"
-               BuildableName = "SourceryTests.xctest"
-               BlueprintName = "SourceryTests"
-               ReferencedContainer = "container:Sourcery.xcodeproj">
+               BuildableName = "SourceTests.xctest"
+               BlueprintName = "SourceTests"
+               ReferencedContainer = "container:Source.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B9AF08261F251C3C004EDBC7"
-               BuildableName = "SourceryTests.xctest"
-               BlueprintName = "SourceryTests"
-               ReferencedContainer = "container:Sourcery.xcodeproj">
+               BuildableName = "SourceTests.xctest"
+               BlueprintName = "SourceTests"
+               ReferencedContainer = "container:Source.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B9AF081D1F251C3C004EDBC7"
-            BuildableName = "Sourcery.framework"
-            BlueprintName = "Sourcery"
-            ReferencedContainer = "container:Sourcery.xcodeproj">
+            BuildableName = "Source.framework"
+            BlueprintName = "Source"
+            ReferencedContainer = "container:Source.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -81,9 +81,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B9AF081D1F251C3C004EDBC7"
-            BuildableName = "Sourcery.framework"
-            BlueprintName = "Sourcery"
-            ReferencedContainer = "container:Sourcery.xcodeproj">
+            BuildableName = "Source.framework"
+            BlueprintName = "Source"
+            ReferencedContainer = "container:Source.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B9AF081D1F251C3C004EDBC7"
-            BuildableName = "Sourcery.framework"
-            BlueprintName = "Sourcery"
-            ReferencedContainer = "container:Sourcery.xcodeproj">
+            BuildableName = "Source.framework"
+            BlueprintName = "Source"
+            ReferencedContainer = "container:Source.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
