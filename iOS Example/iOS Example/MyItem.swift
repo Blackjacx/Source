@@ -12,7 +12,7 @@ import Sourcery
 struct MyItem: Item {
 
     var title: String
-    var cellClass: AnyClass = MyConfigurableCell.self
+    var reusableType: Reusable.Type = MyConfigurableCell.self
     var action: CellAction?
 }
 

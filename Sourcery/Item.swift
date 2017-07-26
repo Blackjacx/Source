@@ -12,14 +12,6 @@ public typealias CellAction = () -> Void
 
 public protocol Item {
 
-    static var reuseIdentifier: String {get}
-    var cellClass: AnyClass {get}
+    var reusableType: Reusable.Type {get}
     var action: CellAction? {get}
-}
-
-public extension Item {
-
-    public static var reuseIdentifier: String {
-        return "\(Self.self)"
-    }
 }

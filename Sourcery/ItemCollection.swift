@@ -52,6 +52,10 @@ extension ItemCollection {
 
     func registerCellsInTableView(_ table: UITableView) {
 
-        sections.flatMap { $0.items }.forEach { table.register($0.cellClass, forCellReuseIdentifier: type(of: $0).reuseIdentifier) }
+        let allItems = sections.flatMap { $0.items }
+        
+        allItems.forEach {
+            table.register($0.reusableType as? AnyClass, forCellReuseIdentifier: $0.reusableType.reuseIdentifier)
+        }
     }
 }

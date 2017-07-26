@@ -57,7 +57,7 @@ extension Sourcery: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let item = collection[indexPath]
-        let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: item.reusableType.reuseIdentifier, for: indexPath)
 
         do {
             guard let configurable = cell as? Configurable else {

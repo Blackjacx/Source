@@ -9,7 +9,7 @@
 import UIKit
 import Sourcery
 
-class MyDisclosureCell: UITableViewCell {
+class MyDisclosureCell: UITableViewCell, Reusable {
 }
 
 extension MyDisclosureCell: Configurable {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84EAA53152896222165CB71F /* Pods_Sourcery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F79F5C0F961ED867D6D0082 /* Pods_Sourcery.framework */; };
+		B93981941F288DD600A259DA /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93981931F288DD600A259DA /* Reusable.swift */; };
 		B98BA39A1F253540003971A4 /* Sourcery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BA3991F253540003971A4 /* Sourcery.swift */; };
 		B98BA39E1F253989003971A4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BA39D1F253989003971A4 /* Item.swift */; };
 		B98BA3A61F2558DE003971A4 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BA3A51F2558DE003971A4 /* Configurable.swift */; };
@@ -33,6 +34,7 @@
 		2F79F5C0F961ED867D6D0082 /* Pods_Sourcery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sourcery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECD4ED36E5CE973F5BA39F8 /* Pods-Sourcery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcery/Pods-Sourcery.debug.xcconfig"; sourceTree = "<group>"; };
 		77A977CDC346F2721161071E /* Pods-Sourcery-SourceryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcery-SourceryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcery-SourceryTests/Pods-Sourcery-SourceryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B93981931F288DD600A259DA /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		B98BA3981F2534F9003971A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B98BA3991F253540003971A4 /* Sourcery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
 		B98BA39D1F253989003971A4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				B9B786F11F26514400AE4609 /* Section.swift */,
 				B9AF08211F251C3C004EDBC7 /* Sourcery.h */,
 				B98BA3991F253540003971A4 /* Sourcery.swift */,
+				B93981931F288DD600A259DA /* Reusable.swift */,
 			);
 			path = Sourcery;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93981941F288DD600A259DA /* Reusable.swift in Sources */,
 				B9B786F21F26514400AE4609 /* Section.swift in Sources */,
 				B98BA39E1F253989003971A4 /* Item.swift in Sources */,
 				B98BA3A61F2558DE003971A4 /* Configurable.swift in Sources */,
