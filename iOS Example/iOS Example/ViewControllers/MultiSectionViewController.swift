@@ -32,8 +32,9 @@ class MultiSectionViewController: UIViewController {
         ]
 
         dataSource.collection = ItemCollection(with: sections)
-
         table.dataSource = dataSource
+        table.delegate = dataSource
+
         table.translatesAutoresizingMaskIntoConstraints = false
         table.addMaximizedTo(view)
     }
@@ -44,13 +45,3 @@ class MultiSectionViewController: UIViewController {
         dataSource.useSectionIndexTitles = !dataSource.useSectionIndexTitles
     }
 }
-
-extension MultiSectionViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let item = dataSource.collection[indexPath]
-        item.action?()
-    }
-}
-

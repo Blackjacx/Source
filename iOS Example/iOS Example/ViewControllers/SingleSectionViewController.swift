@@ -36,19 +36,10 @@ class SingleSectionViewController: UIViewController {
         let section = MySection(items: items, headerTitle: nil, footerTitle: nil)
         dataSource.collection = ItemCollection(with: [section])
         table.dataSource = dataSource
+        table.delegate = dataSource
 
-        table.delegate = self
         table.tableFooterView = UIView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.addMaximizedTo(view)
-    }
-}
-
-extension SingleSectionViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let item = dataSource.collection[indexPath]
-        item.action?()
     }
 }
