@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Source.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9AF08261F251C3C004EDBC7"
+               BuildableName = "SourceTests.xctest"
+               BlueprintName = "SourceTests"
+               ReferencedContainer = "container:Source.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -29,7 +43,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9AF08261F251C3C004EDBC7"
+               BuildableName = "SourceTests.xctest"
+               BlueprintName = "SourceTests"
+               ReferencedContainer = "container:Source.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B9AF081D1F251C3C004EDBC7"
+            BuildableName = "Source.framework"
+            BlueprintName = "Source"
+            ReferencedContainer = "container:Source.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
