@@ -51,6 +51,11 @@ Pushes podspec file to Cocoapods
 Pushes releases to github
 
 Commits and pushes changes to remote and tags the release commit
+### push_framework_podspec
+```
+fastlane push_framework_podspec
+```
+Pushes framework podspec to Cocoapods specs
 
 ----
 

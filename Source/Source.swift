@@ -1,6 +1,6 @@
 //
-//  Sourcery.swift
-//  Sourcery
+//  Source.swift
+//  Source
 //
 //  Created by Stefan Herold on 23.07.17.
 //  Copyright © 2017 CodingCobra. All rights reserved.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-public enum SourceryError: Error {
+public enum SourceError: Error {
 
     case invalidItem(String)
     case configurableExpected(String)
 }
 
-public class Sourcery: NSObject {
+public class Source: NSObject {
 
     public var collection: ItemCollection = ItemCollection() {
 
@@ -44,7 +44,7 @@ public class Sourcery: NSObject {
     }
 }
 
-extension Sourcery: UITableViewDataSource {
+extension Source: UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
         return collection.sectionCount()
@@ -61,7 +61,7 @@ extension Sourcery: UITableViewDataSource {
 
         do {
             guard let configurable = cell as? Configurable else {
-                throw SourceryError.configurableExpected("\(type(of: cell)) expected to confirm to Configurable!")
+                throw SourceError.configurableExpected("\(type(of: cell)) expected to confirm to Configurable!")
             }
             try configurable.configureWithItem(item)
         } catch {
@@ -95,7 +95,7 @@ extension Sourcery: UITableViewDataSource {
 //    optional public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
 }
 
-extension Sourcery: UITableViewDelegate {
+extension Source: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 

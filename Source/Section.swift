@@ -1,6 +1,6 @@
 //
 //  Section.swift
-//  Sourcery
+//  Source
 //
 //  Created by Stefan Herold on 24.07.17.
 //  Copyright © 2017 CodingCobra. All rights reserved.

@@ -1,6 +1,0 @@
-framework module Sourcery {
-  umbrella header "Sourcery.h"
-
-  export *
-  module * { export * }
-}
