@@ -11,8 +11,8 @@ target 'Sourcery' do
   # Pods for Sourcery
 
   target 'SourceryTests' do
-    pod 'Quick'
-    pod 'Nimble'
+#    pod 'Quick'
+#    pod 'Nimble'
   end
 
 end
