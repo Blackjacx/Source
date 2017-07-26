@@ -35,7 +35,7 @@ class MultiSectionViewController: UIViewController {
         table.dataSource = dataSource
         table.delegate = dataSource
 
-        table.translatesAutoresizingMaskIntoConstraints = false
+        table.tableFooterView = UIView()
         table.addMaximizedTo(view)
     }
 

@@ -39,7 +39,6 @@ class SingleSectionViewController: UIViewController {
         table.delegate = dataSource
 
         table.tableFooterView = UIView()
-        table.translatesAutoresizingMaskIntoConstraints = false
         table.addMaximizedTo(view)
     }
 }
