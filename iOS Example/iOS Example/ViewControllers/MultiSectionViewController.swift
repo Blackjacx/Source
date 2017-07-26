@@ -35,28 +35,22 @@ class MultiSectionViewController: UIViewController {
 
         table.dataSource = dataSource
         table.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(table)
-
-        table.reloadData()
-
-        setupLayoutConstraints()
-    }
-
-    private func setupLayoutConstraints() {
-
-        let constraints = [
-            table.leftAnchor.constraint(equalTo: view.leftAnchor),
-            table.rightAnchor.constraint(equalTo: view.rightAnchor),
-            table.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
+        table.addMaximizedTo(view)
     }
 
     // MARK: - Actions
 
     @IBAction func toggleSectionIndexTitles(_ sender: Any) {
         dataSource.useSectionIndexTitles = !dataSource.useSectionIndexTitles
+    }
+}
+
+extension MultiSectionViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = dataSource.collection[indexPath]
+        item.action?()
     }
 }
 

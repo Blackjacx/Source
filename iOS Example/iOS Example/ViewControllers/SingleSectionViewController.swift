@@ -40,20 +40,7 @@ class SingleSectionViewController: UIViewController {
         table.delegate = self
         table.tableFooterView = UIView()
         table.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(table)
-
-        setupLayoutConstraints()
-    }
-
-    private func setupLayoutConstraints() {
-
-        let constraints = [
-            table.leftAnchor.constraint(equalTo: view.leftAnchor),
-            table.rightAnchor.constraint(equalTo: view.rightAnchor),
-            table.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
+        table.addMaximizedTo(view)
     }
 }
 
