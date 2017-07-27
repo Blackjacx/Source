@@ -23,10 +23,7 @@ public struct ItemCollection {
     public init(with initialSections: [Section] = []) {
         sections = initialSections
     }
-}
 
-extension ItemCollection {
-    
     public func sectionCount() -> Int {
         return sections.count
     }
@@ -53,7 +50,7 @@ extension ItemCollection {
     func registerCellsInTableView(_ table: UITableView) {
 
         let allItems = sections.flatMap { $0.items }
-        
+
         allItems.forEach {
             table.register($0.reusableType as? AnyClass, forCellReuseIdentifier: $0.reusableType.reuseIdentifier)
         }
