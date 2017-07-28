@@ -33,7 +33,7 @@ class MultiSectionViewController: UIViewController {
 
         dataSource.collection = ItemCollection(with: sections)
         table.dataSource = dataSource
-        table.delegate = dataSource
+        table.delegate = self
 
         table.tableFooterView = UIView()
         table.addMaximizedTo(view)
@@ -43,5 +43,15 @@ class MultiSectionViewController: UIViewController {
 
     @IBAction func toggleSectionIndexTitles(_ sender: Any) {
         dataSource.useSectionIndexTitles = !dataSource.useSectionIndexTitles
+    }
+}
+
+extension MultiSectionViewController: UITableViewDelegate {
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = dataSource.collection[indexPath]
+        item.action?(indexPath)
     }
 }
