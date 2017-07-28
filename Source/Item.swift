@@ -6,7 +6,7 @@
 //  Copyright © 2017 CodingCobra. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public typealias CellAction = (_ sender: Any) -> Void
 
