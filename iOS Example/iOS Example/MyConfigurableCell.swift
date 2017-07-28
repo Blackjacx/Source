@@ -14,9 +14,12 @@ class MyConfigurableCell: UITableViewCell, Reusable {
 
 extension MyConfigurableCell: Configurable {
 
-    func configureWithItem(_ item: Item) throws {
+    func configureWithItem(_ item: Item?) throws {
 
-        guard let myItem = item as? MyItem else { throw SourceError.invalidItem("\(item)") }
+        guard let myItem = item as? MyItem else {
+            throw SourceError.invalidItem(item)
+
+        }
 
         textLabel?.text = myItem.title
     }
