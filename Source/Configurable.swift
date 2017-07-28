@@ -10,5 +10,5 @@ import Foundation
 
 public protocol Configurable {
 
-    func configureWithItem(_ item: Item) throws
+    func configureWithItem(_ item: Item?) throws
 }
