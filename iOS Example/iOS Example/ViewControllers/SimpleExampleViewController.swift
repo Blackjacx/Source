@@ -21,17 +21,27 @@ class SimpleExampleViewController: UIViewController {
         super.viewDidLoad()
 
         let items = [
-            MyItem(title: "Einstellungen", action:{ print("Einstellungen") }),
-            MyItem(title: "Hilfe", action:{ print("Hilfe") }),
-            MyItem(title: "Logout", action:{ print("Logout") })
+            MyItem(title: "Einstellungen", action:{ (sender) in print("Einstellungen") }),
+            MyItem(title: "Hilfe", action:{ (sender) in print("Hilfe") }),
+            MyItem(title: "Logout", action:{ (sender) in print("Logout") })
         ]
 
         let section = MySection(items: items, headerTitle: nil, footerTitle: nil)
         dataSource.collection = ItemCollection(with: [section])
         table.dataSource = dataSource
-        table.delegate = dataSource
-
+        table.delegate = self
+        
         table.tableFooterView = UIView()
         table.addMaximizedTo(view)
+    }
+}
+
+extension SimpleExampleViewController: UITableViewDelegate {
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = dataSource.collection[indexPath]
+        item.action?(indexPath)
     }
 }

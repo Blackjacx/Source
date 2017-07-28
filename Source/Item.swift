@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias CellAction = () -> Void
+public typealias CellAction = (_ sender: Any) -> Void
 
 public protocol Item {
 

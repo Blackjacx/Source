@@ -94,13 +94,3 @@ extension Source: UITableViewDataSource {
 //    optional public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
 //    optional public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
 }
-
-extension Source: UITableViewDelegate {
-
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        tableView.deselectRow(at: indexPath, animated: true)
-        let item = collection[indexPath]
-        item.action?()
-    }
-}
