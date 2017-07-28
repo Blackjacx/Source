@@ -10,7 +10,7 @@ import UIKit
 
 public enum SourceError: Error {
 
-    case invalidItem(String)
+    case invalidItem(Item?)
     case configurableExpected(String)
 }
 
