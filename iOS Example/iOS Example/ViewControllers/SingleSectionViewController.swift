@@ -51,4 +51,10 @@ extension SingleSectionViewController: UITableViewDelegate {
         let item = dataSource.collection[indexPath]
         item.action?(indexPath)
     }
+
+    // Adjusting the seperator insets: http://stackoverflow.com/a/39005773/971329
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        cell.adjustCellSeparatorInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+    }
 }
