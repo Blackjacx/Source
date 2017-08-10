@@ -109,7 +109,7 @@ lane :release_to_cocoapods do |options|
   
   increment_framework_version(framework: framework, version: version)
   update_framework_podspec(framework: framework, version: version)
-  # push_github_release(framework: framework, version: version)
+  push_github_release(framework: framework, version: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
