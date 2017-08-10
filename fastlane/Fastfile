@@ -189,7 +189,7 @@ end
 
 
 desc "Creates a github release with a git commit changelog"
-lane :push_github_release do |options|
+private_lane :push_github_release do |options|
 
   if !options[:framework] || !options[:version]
     raise "No framework or no version specified".red
