@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Adding changelog support
+- Adding changelog support and automatically pushing github releases
 - [Supporting Collection Views](https://github.com/Blackjacx/Source/pull/9)
 
 ## [0.0.11] - 2017-05-29
