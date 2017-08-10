@@ -11,7 +11,6 @@ import UIKit
 public enum SourceError: Error {
 
     case invalidItem(Item?)
-    case configurableExpected(String)
 }
 
 public class Source: NSObject {
@@ -47,7 +46,7 @@ public class Source: NSObject {
 extension Source: UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return collection.sectionCount()
+        return collection.sectionCount
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,18 +56,19 @@ extension Source: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let item = collection[indexPath]
-        let cell = tableView.dequeueReusableCell(withIdentifier: item.reusableType.reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: item.cellType.reuseIdentifier, for: indexPath)
+
         cell.selectionStyle = item.action == nil ? .none : .default
 
-        do {
-            guard let configurable = cell as? Configurable else {
-                throw SourceError.configurableExpected("\(type(of: cell)) expected to confirm to Configurable!")
-            }
-            try configurable.configureWithItem(item)
-        } catch {
-            assertionFailure("\(error)")
+        guard let configurable = cell as? Configurable else {
+            fatalError("\(type(of: cell)) expected to conform to Configurable!")
         }
 
+        do {
+            try configurable.configureWithItem(item)
+        } catch {
+            fatalError("\(error)")
+        }
         return cell
     }
 

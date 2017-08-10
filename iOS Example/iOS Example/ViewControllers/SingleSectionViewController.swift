@@ -30,7 +30,7 @@ class SingleSectionViewController: UIViewController {
 
         // Changing the connected cell class for all items. Alternatively you can just create a new item and set another default cell type.
         for index in 0..<items.count {
-            items[index].reusableType = MyDisclosureCell.self
+            items[index].cellType = MyDisclosureCell.self
         }
 
         let section = MySection(items: items, headerTitle: nil, footerTitle: nil)
