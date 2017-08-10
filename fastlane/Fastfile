@@ -103,13 +103,13 @@ lane :release_to_cocoapods do |options|
   ensure_git_branch(branch: "develop")
   git_pull
   pod_lib_lint(allow_warnings: false)
-  # run_framework_tests(framework: framework, version: version)
+  run_framework_tests(framework: framework, version: version)
 
   sh "git flow release start #{version}"
   
   increment_framework_version(framework: framework, version: version)
   update_framework_podspec(framework: framework, version: version)
-  push_github_release(framework: framework, version: version)
+  # push_github_release(framework: framework, version: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
