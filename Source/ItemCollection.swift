@@ -14,6 +14,7 @@ public struct ItemCollection {
     private var sections: [Section]
 
     var sectionsWithIndexTitles: [(section: Int, indexTitle: String)] {
+
         return sections.enumerated().flatMap {
             guard let title = $0.element.headerTitle else {return nil}
             return ($0.offset, title)
@@ -21,14 +22,22 @@ public struct ItemCollection {
     }
 
     public init(with initialSections: [Section] = []) {
+
         sections = initialSections
     }
 
-    public func sectionCount() -> Int {
+    public var sectionCount: Int {
+
         return sections.count
     }
 
+    public var allItems: [Item] {
+
+        return sections.flatMap { $0.items }
+    }
+
     public func rowsForSection(_ section: Int) -> Int {
+
         return sections[section].count
     }
 
@@ -49,10 +58,6 @@ public struct ItemCollection {
 
     func registerCellsInTableView(_ table: UITableView) {
 
-        let allItems = sections.flatMap { $0.items }
-
-        allItems.forEach {
-            table.register($0.reusableType as? AnyClass, forCellReuseIdentifier: $0.reusableType.reuseIdentifier)
-        }
+        allItems.forEach { table.register($0.cellType, forCellReuseIdentifier: $0.cellType.reuseIdentifier) }
     }
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2017 CodingCobra. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-public protocol Configurable {
+public protocol Configurable: class {
 
     func configureWithItem(_ item: Item?) throws
 }
