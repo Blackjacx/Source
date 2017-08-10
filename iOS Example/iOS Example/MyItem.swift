@@ -10,9 +10,8 @@ import Foundation
 import Source
 
 struct MyItem: Item {
-
     var title: String
-    var reusableType: Reusable.Type = MyConfigurableCell.self
+    var cellType: (Configurable & Reusable).Type = MyConfigurableCell.self
     var action: CellAction?
 }
 

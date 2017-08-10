@@ -11,9 +11,7 @@ import Source
 
 struct MySection: Section {
 
-    var items: [Item]
-
-    var headerTitle: String?
-
-    var footerTitle: String?
+    let items: [Item]
+    let headerTitle: String?
+    let footerTitle: String?
 }
