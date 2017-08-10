@@ -58,6 +58,7 @@ extension Source: UITableViewDataSource {
 
         let item = collection[indexPath]
         let cell = tableView.dequeueReusableCell(withIdentifier: item.reusableType.reuseIdentifier, for: indexPath)
+        cell.selectionStyle = item.action == nil ? .none : .default
 
         do {
             guard let configurable = cell as? Configurable else {
