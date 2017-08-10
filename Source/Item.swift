@@ -12,6 +12,6 @@ public typealias CellAction = (_ sender: Any) -> Void
 
 public protocol Item {
 
-    var reusableType: Reusable.Type {get}
+    var cellType: (Reusable & Configurable).Type {get}
     var action: CellAction? {get}
 }

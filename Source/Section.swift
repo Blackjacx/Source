@@ -10,9 +10,10 @@ import Foundation
 
 public protocol Section {
 
-    var items: [Item] { get set }
+    var items: [Item] { get }
     var headerTitle: String? { get }
     var footerTitle: String? { get }
+    
     var count: Int { get }
 }
 
