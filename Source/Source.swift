@@ -95,3 +95,31 @@ extension Source: UITableViewDataSource {
 //    optional public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
 //    optional public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
 }
+
+extension Source: UICollectionViewDataSource {
+
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return collection.sectionCount()
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return collection.rowsForSection(section)
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let item = collection[indexPath]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.reusableType.reuseIdentifier, for: indexPath)
+
+        do {
+            guard let configurable = cell as? Configurable else {
+                throw SourceError.configurableExpected("\(type(of: cell)) expected to confirm to Configurable!")
+            }
+            try configurable.configureWithItem(item)
+        } catch {
+            assertionFailure("\(error)")
+        }
+
+        return cell
+    }
+}
