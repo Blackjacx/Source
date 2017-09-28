@@ -8,7 +8,7 @@ Tired of implementing the data sources over and over again? Want to use a lightw
 
 ## Installation
 
-Source is compatible with `iOS 9.3` or higher and builds with `Xcode 9` and `Swift 3` syntax. You already use Swift 4? Then there waits the branch swift4 for you 💪. The framework is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+Source is compatible with `iOS 9.3` or higher and builds with `Xcode 9` and `Swift 4` syntax. You already use Swift 4? Then there waits the branch swift4 for you 💪. The framework is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Source"

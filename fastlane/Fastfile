@@ -39,8 +39,8 @@ fastlane_version "2.45.0"
 # default_platform :ios
 
 before_all do
-  update_fastlane
-  cocoapods
+  # update_fastlane
+  cocoapods(repo_update: true)
 end
 
 
@@ -73,9 +73,8 @@ lane :run_framework_tests do |options|
     workspace: workspace,
     scheme: framework,
     clean: true,
-    devices: ["iPhone 7"],
+    devices: ["iPhone 8", "iPhone 8 Plus", "iPhone X"],
     skip_build: true,
-    thread_sanitizer: true,
     output_types: "html"
   )
 end
@@ -109,7 +108,7 @@ lane :release_to_cocoapods do |options|
   
   increment_framework_version(framework: framework, version: version)
   update_framework_podspec(framework: framework, version: version)
-  # push_github_release(framework: framework, version: version)
+  push_github_release(framework: framework, version: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
@@ -198,13 +197,14 @@ private_lane :push_github_release do |options|
   framework = options[:framework]
   version = options[:version]
 
-
-  # using changelog fastlane plugin
-  changelog=read_changelog
+  changelog=read_changelog(
+    changelog_path: './CHANGELOG.md',	# Specify path to CHANGELOG.md
+    section_identifier: '[Unreleased]',	# Specify what section to read
+    excluded_markdown_elements: []	# Specify which markdown elements should be excluded
+  )
 
   stamp_changelog(
-    section_identifier: version, # Stamp Unreleased section with newly released build number
-    git_tag: version # Specify reference to git tag associated with this section
+    section_identifier: version # Stamp Unreleased section with newly released build number
   )
 
   github_release = set_github_release(
