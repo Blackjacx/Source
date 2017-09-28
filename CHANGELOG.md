@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 ### Added
-* Adding changelog support
+* Adding changelog support and automatically pushing github releases
 * [#9](https://github.com/Blackjacx/Source/pull/9): Supporting Collection Views
 * opts in for new build system
 
