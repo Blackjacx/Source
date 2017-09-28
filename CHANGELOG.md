@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [0.0.12] - 2017-09-28
 ### Changed
 * [#10](https://github.com/Blackjacx/Source/pull/10): Conversion to Swift 4 - [@blackjacx](https://github.com/blackjacx).
 * opts in for new build system - [@blackjacx](https://github.com/blackjacx).
