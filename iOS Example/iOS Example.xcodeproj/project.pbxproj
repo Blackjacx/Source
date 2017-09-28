@@ -18,6 +18,7 @@
 		B98D9C931F27A961002B3819 /* SingleSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9C921F27A8A9002B3819 /* SingleSectionViewController.swift */; };
 		B9A72B461F294F7E00344ADE /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A72B451F294F7E00344ADE /* Source.framework */; };
 		B9A72B471F294F7E00344ADE /* Source.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9A72B451F294F7E00344ADE /* Source.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9B085991F3D1103000CC6E7 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = B9B085981F3D1103000CC6E7 /* CHANGELOG.md */; };
 		B9B786F41F2667E000AE4609 /* MySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B786F31F2667E000AE4609 /* MySection.swift */; };
 		B9B786F61F26686600AE4609 /* MyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B786F51F26686600AE4609 /* MyItem.swift */; };
 		B9B786F81F266C6500AE4609 /* MyConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B786F71F266C6500AE4609 /* MyConfigurableCell.swift */; };
@@ -50,6 +51,7 @@
 		B93981991F2891D800A259DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B98D9C921F27A8A9002B3819 /* SingleSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSectionViewController.swift; sourceTree = "<group>"; };
 		B9A72B451F294F7E00344ADE /* Source.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Source.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B085981F3D1103000CC6E7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		B9B786F31F2667E000AE4609 /* MySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySection.swift; sourceTree = "<group>"; };
 		B9B786F51F26686600AE4609 /* MyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItem.swift; sourceTree = "<group>"; };
 		B9B786F71F266C6500AE4609 /* MyConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConfigurableCell.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A72B451F294F7E00344ADE /* Source.framework */,
+				B9B085981F3D1103000CC6E7 /* CHANGELOG.md */,
 				B93260A11F251DD900175FDD /* iOS Example */,
 				B93260A01F251DD900175FDD /* Products */,
 			);
@@ -174,6 +177,7 @@
 				B93260AD1F251DD900175FDD /* LaunchScreen.storyboard in Resources */,
 				B93260AA1F251DD900175FDD /* Assets.xcassets in Resources */,
 				B93260A81F251DD900175FDD /* Main.storyboard in Resources */,
+				B9B085991F3D1103000CC6E7 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4CZM4Q8JY8;
+				DEVELOPMENT_TEAM = PCW579R278;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codingcobra.iOS-Example";
@@ -343,7 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4CZM4Q8JY8;
+				DEVELOPMENT_TEAM = PCW579R278;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codingcobra.iOS-Example";
