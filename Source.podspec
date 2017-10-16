@@ -13,5 +13,5 @@ Tired of implementing the data sources over and over again? Want to use a lightw
   
   s.ios.deployment_target = '9.3'
 
-  s.source_files = 'Source/**/*'
+  s.source_files = 'Source/*.swift'
 end
