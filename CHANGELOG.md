@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [0.0.13] - 2017-10-16
 ### Changed
 * Update podspec by removing non-source from sources. - [@blackjacx](https://github.com/blackjacx).
 
