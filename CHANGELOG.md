@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.0.13] - 2017-10-16
+### Changed
+* Update podspec by removing non-source from sources. - [@blackjacx](https://github.com/blackjacx).
+
 ## [0.0.12] - 2017-09-28
 ### Changed
 * [#10](https://github.com/Blackjacx/Source/pull/10): Conversion to Swift 4 - [@blackjacx](https://github.com/blackjacx).
