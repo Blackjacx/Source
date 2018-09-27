@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#11](https://github.com/Blackjacx/Source/pull/11): Swift 4.2 Migration & Project Re-Structuring - [@blackjacx](https://github.com/blackjacx).
 
 ## [0.0.13] - 2017-10-16
 ### Changed
