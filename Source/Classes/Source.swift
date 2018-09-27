@@ -82,7 +82,7 @@ extension Source: UITableViewDataSource {
 
     public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         guard useSectionIndexTitles else {return nil}
-        return collection.sectionsWithIndexTitles.flatMap { $0.indexTitle }
+        return collection.sectionsWithIndexTitles.compactMap { $0.indexTitle }
     }
 
     public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {

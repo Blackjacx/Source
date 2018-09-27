@@ -11,7 +11,15 @@ Tired of implementing the data sources over and over again? Want to use a lightw
   s.author           = { 'Stefan Herold' => 'stefan.herold@gmail.com' }
   s.source           = { :git => 'https://github.com/Blackjacx/Source.git', :tag => s.version.to_s }
   
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Source/Classes/**/*'
+
+  # s.resource_bundles = {
+  #   'Resources' => ['Source/Strings/*.lproj/*.strings']
+  # }
+
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -15,7 +15,7 @@ public struct ItemCollection {
 
     var sectionsWithIndexTitles: [(section: Int, indexTitle: String)] {
 
-        return sections.enumerated().flatMap {
+        return sections.enumerated().compactMap {
             guard let title = $0.element.headerTitle else {return nil}
             return ($0.offset, title)
         }
