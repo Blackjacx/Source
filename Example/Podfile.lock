@@ -1,0 +1,27 @@
+PODS:
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
+  - Source (0.0.13)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - Source (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  Source:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  Source: 87b90937b3b80535f504b599671109d0ac420db9
+
+PODFILE CHECKSUM: 1869026d89fe4ab1cc9d863c9cdbf3e4f4af85a0
+
+COCOAPODS: 1.5.3
