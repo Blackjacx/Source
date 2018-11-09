@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Add AUTHORS file - [@blackjacx](https://github.com/blackjacx).
 
 ## [0.1.0] - 2018-09-27
 * [#11](https://github.com/Blackjacx/Source/pull/11): Swift 4.2 Migration & Project Re-Structuring - [@blackjacx](https://github.com/blackjacx).
