@@ -3,43 +3,37 @@
 //  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
 import UIKit
 
-public enum SourceError: Error {
+public typealias DataSourceDidChangedClosure = (_ dataSource: Source) -> Void
 
-    case invalidItem(Item?)
-}
+public final class Source: NSObject {
 
-public class Source: NSObject {
+    public enum Error: Swift.Error {
+        case invalidViewModel(ViewModel?)
+    }
 
-    public var collection: ItemCollection = ItemCollection() {
-
+    public var collection: ModelCollection = ModelCollection() {
         didSet {
-            collection.registerCellsInTableView(tableView)
-            tableView.reloadData()
+            dataSourceDidChangedClosure?(self)
         }
     }
-    
+
     public var useSectionIndexTitles = true {
-
         didSet {
-            tableView.reloadData()
+            dataSourceDidChangedClosure?(self)
         }
     }
 
-    let tableView: UITableView
+    public var dataSourceDidChangedClosure: DataSourceDidChangedClosure?
 
-    @available(*, unavailable, message:"init() has not been implemented")
-    override init() {
-        fatalError()
-    }
-
-    public init(with table: UITableView) {
-        tableView = table
-        super.init()
+    public func registerCells(for table: UITableView) {
+        collection.allModels.forEach {
+            table.register($0.cellType, forCellReuseIdentifier: $0.cellType.reuseIdentifier)
+        }
     }
 }
 
@@ -55,22 +49,28 @@ extension Source: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let item = collection[indexPath]
-        let cell = tableView.dequeueReusableCell(withIdentifier: item.cellType.reuseIdentifier, for: indexPath)
+        let model = collection[indexPath]
+        let cell = tableView.dequeueReusableCell(withIdentifier: model.cellType.reuseIdentifier, for: indexPath)
 
-        cell.selectionStyle = item.action == nil ? .none : .default
-
-        guard let configurable = cell as? Configurable else {
-            fatalError("\(type(of: cell)) expected to conform to Configurable!")
-        }
+        cell.selectionStyle = model.didTap == nil ? .none : .default
 
         do {
-            try configurable.configureWithItem(item)
+            try (cell as? Configurable)?.configure(with: model)
         } catch {
             fatalError("\(error)")
         }
         return cell
     }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+
+        guard collection.isInBounds(indexPath) else {
+            return false
+        }
+        return collection[indexPath].didDelete != nil
+    }
+
+    // MARK: - Section Index Titles
 
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return collection[section].headerTitle

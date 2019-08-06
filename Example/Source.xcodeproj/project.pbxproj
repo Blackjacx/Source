@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,13 +11,13 @@
 		4E65C5143F4A3734E4EB33D9 /* Pods_Source_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C2891E3D3CD3557B8C20F1 /* Pods_Source_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		B940089B22FA2A4D000E1C40 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940089A22FA2A4D000E1C40 /* MyModel.swift */; };
 		B9DDA3DB215CB4BA00AFC409 /* SourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3D9215CB4B700AFC409 /* SourceTests.swift */; };
 		B9DDA3DD215CB50E00AFC409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DDA3DC215CB50E00AFC409 /* Images.xcassets */; };
 		B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DE215CB53000AFC409 /* Extensions.swift */; };
 		B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */; };
 		B9DDA3E8215CB53100AFC409 /* MultiSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */; };
 		B9DDA3E9215CB53100AFC409 /* MySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E1215CB53000AFC409 /* MySection.swift */; };
-		B9DDA3EA215CB53100AFC409 /* MyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E2215CB53000AFC409 /* MyItem.swift */; };
 		B9DDA3EB215CB53100AFC409 /* MyConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */; };
 		B9DDA3EC215CB53100AFC409 /* MyDisclosureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */; };
 		B9DDA3ED215CB53100AFC409 /* SimpleExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */; };
@@ -46,13 +46,13 @@
 		79207A61AFC57E5D70101589 /* Pods-Source_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Source_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Source_Tests/Pods-Source_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0CE0141F0E419B17F502A17 /* Pods-Source_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Source_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Source_Example/Pods-Source_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B31DC17F29CF9D55EEEACA50 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B940089A22FA2A4D000E1C40 /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		B9DDA3D9215CB4B700AFC409 /* SourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceTests.swift; sourceTree = "<group>"; };
 		B9DDA3DC215CB50E00AFC409 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9DDA3DE215CB53000AFC409 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSectionViewController.swift; sourceTree = "<group>"; };
 		B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSectionViewController.swift; sourceTree = "<group>"; };
 		B9DDA3E1215CB53000AFC409 /* MySection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySection.swift; sourceTree = "<group>"; };
-		B9DDA3E2215CB53000AFC409 /* MyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItem.swift; sourceTree = "<group>"; };
 		B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConfigurableCell.swift; sourceTree = "<group>"; };
 		B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDisclosureCell.swift; sourceTree = "<group>"; };
 		B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleExampleViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */,
 				B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */,
 				B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */,
-				B9DDA3E2215CB53000AFC409 /* MyItem.swift */,
+				B940089A22FA2A4D000E1C40 /* MyModel.swift */,
 				B9DDA3E1215CB53000AFC409 /* MySection.swift */,
 				B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */,
 				B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */,
@@ -229,8 +229,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = CocoaPods;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = CodingCobra;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -246,10 +246,11 @@
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Source" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -291,22 +292,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Source_Tests/Pods-Source_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Source_Tests/Pods-Source_Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Source_Tests/Pods-Source_Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Source_Tests/Pods-Source_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Source_Tests/Pods-Source_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9667E0FB07628C451825AB5C /* [CP] Embed Pods Frameworks */ = {
@@ -315,20 +309,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Source_Example/Pods-Source_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Source/Source.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Source_Example/Pods-Source_Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Source.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Source_Example/Pods-Source_Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Source_Example/Pods-Source_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Source_Example/Pods-Source_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E7041CB13F270DE58D41F8A3 /* [CP] Check Pods Manifest.lock */ = {
@@ -383,13 +372,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9DDA3ED215CB53100AFC409 /* SimpleExampleViewController.swift in Sources */,
+				B940089B22FA2A4D000E1C40 /* MyModel.swift in Sources */,
 				B9DDA3E8215CB53100AFC409 /* MultiSectionViewController.swift in Sources */,
 				B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */,
 				B9DDA3EC215CB53100AFC409 /* MyDisclosureCell.swift in Sources */,
 				B9DDA3EB215CB53100AFC409 /* MyConfigurableCell.swift in Sources */,
-				B9DDA3EA215CB53100AFC409 /* MyItem.swift in Sources */,
 				B9DDA3E9215CB53100AFC409 /* MySection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -471,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -483,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -519,10 +510,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -535,9 +527,12 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = PCW579R278;
 				INFOPLIST_FILE = Source/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.source.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -552,9 +547,12 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = PCW579R278;
 				INFOPLIST_FILE = Source/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.source.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -572,7 +570,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -588,7 +590,11 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = PCW579R278;
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

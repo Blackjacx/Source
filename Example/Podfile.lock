@@ -1,7 +1,7 @@
 PODS:
-  - Nimble (7.3.1)
-  - Quick (1.3.2)
-  - Source (0.0.13)
+  - Nimble (8.0.2)
+  - Quick (2.1.0)
+  - Source (0.1.0)
 
 DEPENDENCIES:
   - Nimble
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
-  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
-  Source: 87b90937b3b80535f504b599671109d0ac420db9
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  Source: f3f3f19ce395c5e811641b1a56a44d1b2062fbe2
 
-PODFILE CHECKSUM: 1869026d89fe4ab1cc9d863c9cdbf3e4f4af85a0
+PODFILE CHECKSUM: 015feec26d1585d1a876642088205f34385ff02f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5
