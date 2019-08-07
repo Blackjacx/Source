@@ -12,35 +12,11 @@ import Source
 class SimpleExampleViewController: UIViewController {
 
     let table = UITableView()
-
-    var dataSource: Source = Source() {
-        didSet {
-            dataSource.dataSourceDidChangedClosure = { [weak self] (dataSource) in
-                guard let self = self else { return }
-                dataSource.registerCells(for: self.table)
-                self.table.reloadData()
-            }
-            dataSource.registerCells(for: table)
-            table.reloadData()
-        }
-    }
+    let dataSource = Source()
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        let dataSource: Source = {
-            let source = Source()
-            let models = [
-                MyModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
-                MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
-                MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
-            ]
-            let section = MySection(models: models, headerTitle: nil, footerTitle: nil)
-            source.collection = ModelCollection(with: [section])
-            return source
-        }()
-        self.dataSource = dataSource
 
         table.dataSource = dataSource
         table.delegate = self
@@ -48,8 +24,24 @@ class SimpleExampleViewController: UIViewController {
         table.tableFooterView = UIView()
         table.addMaximizedTo(view)
 
+        setupDataSource()
+    }
 
-        self.dataSource = dataSource
+    private func setupDataSource() {
+
+        dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
+            guard let self = self else { return }
+            source.registerCells(for: self.table)
+            self.table.reloadData()
+        }
+
+        let models = [
+            MyModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
+            MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
+            MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
+        ]
+        let section = DefaultSection(models: models)
+        dataSource.collection = ModelCollection(with: [section])
     }
 }
 

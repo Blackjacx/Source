@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		B92E352B22FA4D7C00441CE0 /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; };
 		B940089B22FA2A4D000E1C40 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940089A22FA2A4D000E1C40 /* MyModel.swift */; };
+		B952B72222FB1B0200B7A486 /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; };
+		B952B72322FB1B0200B7A486 /* Source.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B9DDA3DD215CB50E00AFC409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DDA3DC215CB50E00AFC409 /* Images.xcassets */; };
 		B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DE215CB53000AFC409 /* Extensions.swift */; };
 		B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */; };
 		B9DDA3E8215CB53100AFC409 /* MultiSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */; };
-		B9DDA3E9215CB53100AFC409 /* MySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E1215CB53000AFC409 /* MySection.swift */; };
 		B9DDA3EB215CB53100AFC409 /* MyConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */; };
 		B9DDA3EC215CB53100AFC409 /* MyDisclosureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */; };
 		B9DDA3ED215CB53100AFC409 /* SimpleExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */; };
@@ -32,6 +32,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B952B72422FB1B0200B7A486 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B952B72322FB1B0200B7A486 /* Source.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		607FACD01AFB9204008FA782 /* Source_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Source_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +58,6 @@
 		B9DDA3DE215CB53000AFC409 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSectionViewController.swift; sourceTree = "<group>"; };
 		B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSectionViewController.swift; sourceTree = "<group>"; };
-		B9DDA3E1215CB53000AFC409 /* MySection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySection.swift; sourceTree = "<group>"; };
 		B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConfigurableCell.swift; sourceTree = "<group>"; };
 		B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDisclosureCell.swift; sourceTree = "<group>"; };
 		B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleExampleViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92E352B22FA4D7C00441CE0 /* Source.framework in Frameworks */,
+				B952B72222FB1B0200B7A486 /* Source.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +118,6 @@
 				B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */,
 				B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */,
 				B940089A22FA2A4D000E1C40 /* MyModel.swift */,
-				B9DDA3E1215CB53000AFC409 /* MySection.swift */,
 				B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */,
 				B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */,
 				B9DDA3DC215CB50E00AFC409 /* Images.xcassets */,
@@ -134,6 +146,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				B952B72422FB1B0200B7A486 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,7 +295,6 @@
 				B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */,
 				B9DDA3EC215CB53100AFC409 /* MyDisclosureCell.swift in Sources */,
 				B9DDA3EB215CB53100AFC409 /* MyConfigurableCell.swift in Sources */,
-				B9DDA3E9215CB53100AFC409 /* MySection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,48 +12,43 @@ import Source
 class SingleSectionViewController: UIViewController {
 
     let table = UITableView()
-
-    var dataSource: Source = Source() {
-        didSet {
-            dataSource.dataSourceDidChangedClosure = { [weak self] (dataSource) in
-                guard let self = self else { return }
-                self.dataSource.registerCells(for: self.table)
-                self.table.reloadData()
-            }
-            dataSource.registerCells(for: table)
-            table.reloadData()
-        }
-    }
+    let dataSource = Source()
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        let dataSource: Source = {
-            let source = Source()
-            var models = [
-                MyModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
-                MyModel(title: "Impressung", didTap: { (sender) in print("Impressum") }),
-                MyModel(title: "Empfehlen", didTap: { (sender) in print("Empfehlen") }),
-                MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
-                MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
-            ]
-            // Changing the connected cell class for all models. Alternatively you
-            // can just create a new model and set another default cell type.
-            for index in 0..<models.count {
-                models[index].cellType = MyDisclosureCell.self
-            }
-            let section = MySection(models: models, headerTitle: nil, footerTitle: nil)
-            source.collection = ModelCollection(with: [section])
-            return source
-        }()
-        self.dataSource = dataSource
 
         table.dataSource = dataSource
         table.delegate = self
 
         table.tableFooterView = UIView()
         table.addMaximizedTo(view)
+
+        setupDataSource()
+    }
+
+    private func setupDataSource() {
+
+        dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
+            guard let self = self else { return }
+            source.registerCells(for: self.table)
+            self.table.reloadData()
+        }
+
+        var models = [
+            MyModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
+            MyModel(title: "Impressung", didTap: { (sender) in print("Impressum") }),
+            MyModel(title: "Empfehlen", didTap: { (sender) in print("Empfehlen") }),
+            MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
+            MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
+        ]
+        // Changing the connected cell class for all models. Alternatively you
+        // can just create a new model and set another default cell type.
+        for index in 0..<models.count {
+            models[index].cellType = MyDisclosureCell.self
+        }
+        let section = DefaultSection(models: models)
+        dataSource.collection = ModelCollection(with: [section])
     }
 }
 

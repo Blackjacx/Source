@@ -12,106 +12,100 @@ import Source
 class MultiSectionViewController: UIViewController {
 
     let table = UITableView()
-
-    var dataSource: Source = Source() {
-        didSet {
-            dataSource.dataSourceDidChangedClosure = { [weak self] (dataSource) in
-                guard let self = self else { return }
-                self.dataSource.registerCells(for: self.table)
-                self.table.reloadData()
-            }
-            dataSource.registerCells(for: table)
-            table.reloadData()
-        }
-    }
+    let dataSource = Source()
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        let dataSource: Source = {
-            let source = Source()
-            let sections = [
-                MySection(models: [MyModel(title: "Mom"),
-                                   MyModel(title: "Dad"),
-                                   MyModel(title: "Brother"),
-                                   MyModel(title: "Mom"),
-                                   MyModel(title: "Dad"),
-                                   MyModel(title: "Brother"),
-                                   MyModel(title: "Mom"),
-                                   MyModel(title: "Dad"),
-                                   MyModel(title: "Brother"),
-                                   MyModel(title: "Mom"),
-                                   MyModel(title: "Dad"),
-                                   MyModel(title: "Brother")],
-                          headerTitle: "Family",
-                          footerTitle: nil),
-
-                MySection(models: [MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape"),
-                                   MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape"),
-                                   MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape"),
-                                   MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape")],
-                          headerTitle: "Fruits",
-                          footerTitle: nil),
-
-                // No header title -> no section index title
-                MySection(models: [MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape"),
-                                   MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape"),
-                                   MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape"),
-                                   MyModel(title: "Apple"),
-                                   MyModel(title: "Banana"),
-                                   MyModel(title: "Grape")],
-                          headerTitle: nil,
-                          footerTitle: nil),
-
-                MySection(models: [MyModel(title: "Vampire"),
-                                   MyModel(title: "Lycan"),
-                                   MyModel(title: "Clown"),
-                                   MyModel(title: "God"),
-                                   MyModel(title: "Djin"),
-                                   MyModel(title: "Vampire"),
-                                   MyModel(title: "Lycan"),
-                                   MyModel(title: "Clown"),
-                                   MyModel(title: "God"),
-                                   MyModel(title: "Djin"),
-                                   MyModel(title: "Vampire"),
-                                   MyModel(title: "Lycan"),
-                                   MyModel(title: "Clown"),
-                                   MyModel(title: "God"),
-                                   MyModel(title: "Djin"),
-                                   MyModel(title: "Vampire"),
-                                   MyModel(title: "Lycan"),
-                                   MyModel(title: "Clown"),
-                                   MyModel(title: "God"),
-                                   MyModel(title: "Djin")],
-                          headerTitle: "Monsters",
-                          footerTitle: nil)
-            ]
-
-            source.collection = ModelCollection(with: sections)
-            return source
-        }()
-        self.dataSource = dataSource
 
         table.dataSource = dataSource
         table.delegate = self
 
         table.tableFooterView = UIView()
         table.addMaximizedTo(view)
+
+        setupDataSource()
+    }
+
+    private func setupDataSource() {
+
+        dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
+            guard let self = self else { return }
+            source.registerCells(for: self.table)
+            self.table.reloadData()
+        }
+
+        let sections = [
+            DefaultSection(models: [MyModel(title: "Mom"),
+                               MyModel(title: "Dad"),
+                               MyModel(title: "Brother"),
+                               MyModel(title: "Mom"),
+                               MyModel(title: "Dad"),
+                               MyModel(title: "Brother"),
+                               MyModel(title: "Mom"),
+                               MyModel(title: "Dad"),
+                               MyModel(title: "Brother"),
+                               MyModel(title: "Mom"),
+                               MyModel(title: "Dad"),
+                               MyModel(title: "Brother")],
+                      headerTitle: "Family",
+                      footerTitle: nil),
+
+            DefaultSection(models: [MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape"),
+                               MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape"),
+                               MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape"),
+                               MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape")],
+                      headerTitle: "Fruits",
+                      footerTitle: nil),
+
+            // No header title -> no section index title
+            DefaultSection(models: [MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape"),
+                               MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape"),
+                               MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape"),
+                               MyModel(title: "Apple"),
+                               MyModel(title: "Banana"),
+                               MyModel(title: "Grape")],
+                      headerTitle: nil,
+                      footerTitle: nil),
+
+            DefaultSection(models: [MyModel(title: "Vampire"),
+                               MyModel(title: "Lycan"),
+                               MyModel(title: "Clown"),
+                               MyModel(title: "God"),
+                               MyModel(title: "Djin"),
+                               MyModel(title: "Vampire"),
+                               MyModel(title: "Lycan"),
+                               MyModel(title: "Clown"),
+                               MyModel(title: "God"),
+                               MyModel(title: "Djin"),
+                               MyModel(title: "Vampire"),
+                               MyModel(title: "Lycan"),
+                               MyModel(title: "Clown"),
+                               MyModel(title: "God"),
+                               MyModel(title: "Djin"),
+                               MyModel(title: "Vampire"),
+                               MyModel(title: "Lycan"),
+                               MyModel(title: "Clown"),
+                               MyModel(title: "God"),
+                               MyModel(title: "Djin")],
+                      headerTitle: "Monsters",
+                      footerTitle: nil)
+        ]
+        dataSource.collection = ModelCollection(with: sections)
     }
 
     // MARK: - Actions
