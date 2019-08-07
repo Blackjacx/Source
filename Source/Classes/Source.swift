@@ -28,10 +28,6 @@ public final class Source: NSObject {
         }
     }
 
-    func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        print(previousTraitCollection)
-    }
-
     public var dataSourceDidChangedClosure: DataSourceDidChangedClosure?
 
     public func registerCells(for table: UITableView) {
@@ -66,7 +62,7 @@ extension Source: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 
         guard collection.isInBounds(indexPath) else {
             return false

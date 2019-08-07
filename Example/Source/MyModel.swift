@@ -6,7 +6,7 @@
 //  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Source
 
 struct MyModel: ViewModel {

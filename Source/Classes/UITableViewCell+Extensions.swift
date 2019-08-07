@@ -17,7 +17,7 @@ public extension UITableViewCell {
         guard modelCollection.isInBounds(indexPath) else { return }
 
         let item = modelCollection[indexPath]
-        var insets = item.separatorInsets
+        let insets = item.separatorInsets
 
         // removing separator inset
         separatorInset = insets.edgeInsets

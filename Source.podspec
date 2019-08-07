@@ -15,6 +15,8 @@ Tired of implementing the data sources over and over again? Want to use a lightw
 
   s.source_files = 'Source/Classes/**/*'
 
+  s.swift_versions = ['5.0']
+
   # s.resource_bundles = {
   #   'Resources' => ['Source/Strings/*.lproj/*.strings']
   # }

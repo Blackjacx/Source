@@ -6,7 +6,7 @@
 //  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public typealias DidTapClosure = (_ indexPath: IndexPath) -> Void
 public typealias DidDeleteClosure = (_ indexPath: IndexPath) -> Void

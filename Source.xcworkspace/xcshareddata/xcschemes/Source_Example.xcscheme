@@ -17,21 +17,7 @@
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
                BuildableName = "Source_Example.app"
                BlueprintName = "Source_Example"
-               ReferencedContainer = "container:Source.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Source_Tests.xctest"
-               BlueprintName = "Source_Tests"
-               ReferencedContainer = "container:Source.xcodeproj">
+               ReferencedContainer = "container:Example/SourceExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,29 +26,11 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Source_Example.app"
-            BlueprintName = "Source_Example"
-            ReferencedContainer = "container:Source.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Source_Tests.xctest"
-               BlueprintName = "Source_Tests"
-               ReferencedContainer = "container:Source.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -81,9 +49,11 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Source_Example.app"
             BlueprintName = "Source_Example"
-            ReferencedContainer = "container:Source.xcodeproj">
+            ReferencedContainer = "container:Example/SourceExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -98,7 +68,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Source_Example.app"
             BlueprintName = "Source_Example"
-            ReferencedContainer = "container:Source.xcodeproj">
+            ReferencedContainer = "container:Example/SourceExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
