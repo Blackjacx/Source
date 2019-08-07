@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Rename invalidViewModel > invalidModel - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.1] - 2019-08-07
 * Publish DefaultSection initializer - [@Blackjacx](https://github.com/blackjacx).
