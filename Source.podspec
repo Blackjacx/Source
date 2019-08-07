@@ -14,7 +14,7 @@ Tired of implementing the data sources over and over again? Want to use a lightw
   s.ios.deployment_target = '11.0'
 
   s.source_files = 'Source/Classes/**/*'
-
+  s.frameworks = 'UIKit'
   s.swift_versions = ['5.0']
 
   # s.resource_bundles = {
@@ -22,6 +22,5 @@ Tired of implementing the data sources over and over again? Want to use a lightw
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
