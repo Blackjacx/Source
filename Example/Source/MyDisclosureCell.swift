@@ -14,7 +14,7 @@ class MyDisclosureCell: UITableViewCell, Reusable {}
 extension MyDisclosureCell: Configurable {
 
     func configure(with model: ViewModel?) throws {
-        guard let myModel = model as? MyModel else { throw Source.Error.invalidViewModel(model) }
+        guard let myModel = model as? MyModel else { throw Source.Error.invalidModel(model) }
         accessoryType = .disclosureIndicator
         textLabel?.text = myModel.title
     }
