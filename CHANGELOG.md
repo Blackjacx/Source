@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.0] - 2019-08-07
 * [#13](https://github.com/Blackjacx/Source/pull/13): Upgrade Project Structure - [@Blackjacx](https://github.com/blackjacx).
 * Add AUTHORS file - [@Blackjacx](https://github.com/blackjacx).
 
