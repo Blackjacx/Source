@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Publish DefaultSection initializer - [@Blackjacx](https://github.com/blackjacx).
 * Embed Framework, Fix Examples, UIKit dependency - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.0] - 2019-08-07
