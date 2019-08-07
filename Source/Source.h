@@ -2,11 +2,11 @@
 //  Source.h
 //  Source
 //
-//  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Created by Stefan Herold on 07.08.19.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Source.
 FOUNDATION_EXPORT double SourceVersionNumber;

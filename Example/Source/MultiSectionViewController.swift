@@ -1,9 +1,9 @@
 //
 //  MultiSectionViewController.swift
-//  iOS Example
+//  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
 import UIKit
@@ -12,26 +12,101 @@ import Source
 class MultiSectionViewController: UIViewController {
 
     let table = UITableView()
-    lazy var dataSource: Source = {
-        return Source(with: table)
-    }()
+
+    var dataSource: Source = Source() {
+        didSet {
+            dataSource.dataSourceDidChangedClosure = { [weak self] (dataSource) in
+                guard let self = self else { return }
+                self.dataSource.registerCells(for: self.table)
+                self.table.reloadData()
+            }
+            dataSource.registerCells(for: table)
+            table.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
-        let sections = [
-            MySection(items: [MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother"), MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother"), MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother"), MyItem(title: "Mom"), MyItem(title: "Dad"), MyItem(title: "Brother")], headerTitle: "Family", footerTitle: nil),
-            
-            MySection(items: [MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape")], headerTitle: "Fruits", footerTitle: nil),
+        let dataSource: Source = {
+            let source = Source()
+            let sections = [
+                MySection(models: [MyModel(title: "Mom"),
+                                   MyModel(title: "Dad"),
+                                   MyModel(title: "Brother"),
+                                   MyModel(title: "Mom"),
+                                   MyModel(title: "Dad"),
+                                   MyModel(title: "Brother"),
+                                   MyModel(title: "Mom"),
+                                   MyModel(title: "Dad"),
+                                   MyModel(title: "Brother"),
+                                   MyModel(title: "Mom"),
+                                   MyModel(title: "Dad"),
+                                   MyModel(title: "Brother")],
+                          headerTitle: "Family",
+                          footerTitle: nil),
 
-            // No header title -> no section index title
-            MySection(items: [MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape"), MyItem(title: "Apple"), MyItem(title: "Banana"), MyItem(title: "Grape")], headerTitle: nil, footerTitle: nil),
+                MySection(models: [MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape"),
+                                   MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape"),
+                                   MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape"),
+                                   MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape")],
+                          headerTitle: "Fruits",
+                          footerTitle: nil),
 
-            MySection(items: [MyItem(title: "Vampire"), MyItem(title: "Lycan"), MyItem(title: "Clown"), MyItem(title: "God"), MyItem(title: "Djin"), MyItem(title: "Vampire"), MyItem(title: "Lycan"), MyItem(title: "Clown"), MyItem(title: "God"), MyItem(title: "Djin"), MyItem(title: "Vampire"), MyItem(title: "Lycan"), MyItem(title: "Clown"), MyItem(title: "God"), MyItem(title: "Djin"), MyItem(title: "Vampire"), MyItem(title: "Lycan"), MyItem(title: "Clown"), MyItem(title: "God"), MyItem(title: "Djin")], headerTitle: "Monsters", footerTitle: nil)
-        ]
+                // No header title -> no section index title
+                MySection(models: [MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape"),
+                                   MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape"),
+                                   MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape"),
+                                   MyModel(title: "Apple"),
+                                   MyModel(title: "Banana"),
+                                   MyModel(title: "Grape")],
+                          headerTitle: nil,
+                          footerTitle: nil),
 
-        dataSource.collection = ItemCollection(with: sections)
+                MySection(models: [MyModel(title: "Vampire"),
+                                   MyModel(title: "Lycan"),
+                                   MyModel(title: "Clown"),
+                                   MyModel(title: "God"),
+                                   MyModel(title: "Djin"),
+                                   MyModel(title: "Vampire"),
+                                   MyModel(title: "Lycan"),
+                                   MyModel(title: "Clown"),
+                                   MyModel(title: "God"),
+                                   MyModel(title: "Djin"),
+                                   MyModel(title: "Vampire"),
+                                   MyModel(title: "Lycan"),
+                                   MyModel(title: "Clown"),
+                                   MyModel(title: "God"),
+                                   MyModel(title: "Djin"),
+                                   MyModel(title: "Vampire"),
+                                   MyModel(title: "Lycan"),
+                                   MyModel(title: "Clown"),
+                                   MyModel(title: "God"),
+                                   MyModel(title: "Djin")],
+                          headerTitle: "Monsters",
+                          footerTitle: nil)
+            ]
+
+            source.collection = ModelCollection(with: sections)
+            return source
+        }()
+        self.dataSource = dataSource
+
         table.dataSource = dataSource
         table.delegate = self
 
@@ -51,7 +126,7 @@ extension MultiSectionViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = dataSource.collection[indexPath]
-        item.action?(indexPath)
+        let model = dataSource.collection[indexPath]
+        model.didTap?(indexPath)
     }
 }

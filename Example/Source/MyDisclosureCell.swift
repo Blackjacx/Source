@@ -1,24 +1,21 @@
 //
 //  MyDisclosureCell.swift
-//  iOS Example
+//  Source
 //
 //  Created by Stefan Herold on 24.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
 import UIKit
 import Source
 
-class MyDisclosureCell: UITableViewCell, Reusable {
-}
+class MyDisclosureCell: UITableViewCell, Reusable {}
 
 extension MyDisclosureCell: Configurable {
 
-    func configureWithItem(_ item: Item?) throws {
-
-        guard let myItem = item as? MyItem else { throw SourceError.invalidItem(item) }
-
+    func configure(with model: ViewModel?) throws {
+        guard let myModel = model as? MyModel else { throw Source.Error.invalidViewModel(model) }
         accessoryType = .disclosureIndicator
-        textLabel?.text = myItem.title
+        textLabel?.text = myModel.title
     }
 }

@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  iOS Example
+//  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
 import UIKit

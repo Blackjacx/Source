@@ -1,9 +1,9 @@
 //
 //  SimpleExampleViewController.swift
-//  iOS Example
+//  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
 import UIKit
@@ -12,27 +12,44 @@ import Source
 class SimpleExampleViewController: UIViewController {
 
     let table = UITableView()
-    lazy var dataSource: Source = {
-        return Source(with: table)
-    }()
+
+    var dataSource: Source = Source() {
+        didSet {
+            dataSource.dataSourceDidChangedClosure = { [weak self] (dataSource) in
+                guard let self = self else { return }
+                dataSource.registerCells(for: self.table)
+                self.table.reloadData()
+            }
+            dataSource.registerCells(for: table)
+            table.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
-        let items = [
-            MyItem(title: "Einstellungen", action:{ (sender) in print("Einstellungen") }),
-            MyItem(title: "Hilfe", action:{ (sender) in print("Hilfe") }),
-            MyItem(title: "Logout", action:{ (sender) in print("Logout") })
-        ]
+        let dataSource: Source = {
+            let source = Source()
+            let models = [
+                MyModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
+                MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
+                MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
+            ]
+            let section = MySection(models: models, headerTitle: nil, footerTitle: nil)
+            source.collection = ModelCollection(with: [section])
+            return source
+        }()
+        self.dataSource = dataSource
 
-        let section = MySection(items: items, headerTitle: nil, footerTitle: nil)
-        dataSource.collection = ItemCollection(with: [section])
         table.dataSource = dataSource
         table.delegate = self
         
         table.tableFooterView = UIView()
         table.addMaximizedTo(view)
+
+
+        self.dataSource = dataSource
     }
 }
 
@@ -41,7 +58,7 @@ extension SimpleExampleViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = dataSource.collection[indexPath]
-        item.action?(indexPath)
+        let model = dataSource.collection[indexPath]
+        model.didTap?(indexPath)
     }
 }

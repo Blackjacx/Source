@@ -1,9 +1,9 @@
 //
 //  MySection.swift
-//  iOS Example
+//  Source
 //
 //  Created by Stefan Herold on 24.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import Source
 
 struct MySection: Section {
 
-    let items: [Item]
+    let models: [ViewModel]
     let headerTitle: String?
     let footerTitle: String?
 }
