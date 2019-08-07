@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Embed Framework, Fix Examples, UIKit dependency - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.0] - 2019-08-07
 * [#13](https://github.com/Blackjacx/Source/pull/13): Upgrade Project Structure - [@Blackjacx](https://github.com/blackjacx).
