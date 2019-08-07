@@ -13,7 +13,7 @@ public typealias DataSourceDidChangedClosure = (_ dataSource: Source) -> Void
 public final class Source: NSObject {
 
     public enum Error: Swift.Error {
-        case invalidViewModel(ViewModel?)
+        case invalidModel(ViewModel?)
     }
 
     public var collection: ModelCollection = ModelCollection() {

@@ -15,7 +15,7 @@ class MyConfigurableCell: UITableViewCell, Reusable {
 extension MyConfigurableCell: Configurable {
 
     func configure(with model: ViewModel?) throws {
-        guard let myModel = model as? MyModel else { throw Source.Error.invalidViewModel(model) }
+        guard let myModel = model as? MyModel else { throw Source.Error.invalidModel(model) }
         textLabel?.text = myModel.title
     }
 }
