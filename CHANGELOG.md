@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.2] - 2019-08-07
 * Rename invalidViewModel > invalidModel - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.1] - 2019-08-07
