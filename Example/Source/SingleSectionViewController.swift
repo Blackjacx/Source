@@ -1,9 +1,9 @@
 //
 //  SingleSectionViewController.swift
-//  iOS Example
+//  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2017 CodingCobra. All rights reserved.
+//  Copyright © 2019 CodingCobra. All rights reserved.
 //
 
 import UIKit
@@ -12,29 +12,43 @@ import Source
 class SingleSectionViewController: UIViewController {
 
     let table = UITableView()
-    lazy var dataSource: Source = {
-        return Source(with: table)
-    }()
+
+    var dataSource: Source = Source() {
+        didSet {
+            dataSource.dataSourceDidChangedClosure = { [weak self] (dataSource) in
+                guard let self = self else { return }
+                self.dataSource.registerCells(for: self.table)
+                self.table.reloadData()
+            }
+            dataSource.registerCells(for: table)
+            table.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
-        var items = [
-            MyItem(title: "Einstellungen", action:{ (sender) in print("Einstellungen") }),
-            MyItem(title: "Impressung", action:{ (sender) in print("Impressum") }),
-            MyItem(title: "Empfehlen", action:{ (sender) in print("Empfehlen") }),
-            MyItem(title: "Hilfe", action:{ (sender) in print("Hilfe") }),
-            MyItem(title: "Logout", action:{ (sender) in print("Logout") })
-        ]
+        let dataSource: Source = {
+            let source = Source()
+            var models = [
+                MyModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
+                MyModel(title: "Impressung", didTap: { (sender) in print("Impressum") }),
+                MyModel(title: "Empfehlen", didTap: { (sender) in print("Empfehlen") }),
+                MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
+                MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
+            ]
+            // Changing the connected cell class for all models. Alternatively you
+            // can just create a new model and set another default cell type.
+            for index in 0..<models.count {
+                models[index].cellType = MyDisclosureCell.self
+            }
+            let section = MySection(models: models, headerTitle: nil, footerTitle: nil)
+            source.collection = ModelCollection(with: [section])
+            return source
+        }()
+        self.dataSource = dataSource
 
-        // Changing the connected cell class for all items. Alternatively you can just create a new item and set another default cell type.
-        for index in 0..<items.count {
-            items[index].cellType = MyDisclosureCell.self
-        }
-
-        let section = MySection(items: items, headerTitle: nil, footerTitle: nil)
-        dataSource.collection = ItemCollection(with: [section])
         table.dataSource = dataSource
         table.delegate = self
 
@@ -48,13 +62,12 @@ extension SingleSectionViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = dataSource.collection[indexPath]
-        item.action?(indexPath)
+        let model = dataSource.collection[indexPath]
+        model.didTap?(indexPath)
     }
 
     // Adjusting the seperator insets: http://stackoverflow.com/a/39005773/971329
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-
-        cell.adjustCellSeparatorInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        cell.adjustCellSeparatorInsets(at: indexPath, for: dataSource.collection)
     }
 }
