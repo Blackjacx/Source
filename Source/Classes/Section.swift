@@ -26,4 +26,10 @@ public struct DefaultSection: Section {
     public let models: [ViewModel]
     public let headerTitle: String?
     public let footerTitle: String?
+
+    public init(models: [ViewModel], headerTitle: String? = nil, footerTitle: String? = nil) {
+        self.models = models
+        self.headerTitle = headerTitle
+        self.footerTitle = footerTitle
+    }
 }

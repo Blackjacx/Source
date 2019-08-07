@@ -40,7 +40,7 @@ class SimpleExampleViewController: UIViewController {
             MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
             MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
         ]
-        let section = MySection(models: models, headerTitle: nil, footerTitle: nil)
+        let section = DefaultSection(models: models)
         dataSource.collection = ModelCollection(with: [section])
     }
 }

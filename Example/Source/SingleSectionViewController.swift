@@ -47,7 +47,7 @@ class SingleSectionViewController: UIViewController {
         for index in 0..<models.count {
             models[index].cellType = MyDisclosureCell.self
         }
-        let section = MySection(models: models, headerTitle: nil, footerTitle: nil)
+        let section = DefaultSection(models: models)
         dataSource.collection = ModelCollection(with: [section])
     }
 }

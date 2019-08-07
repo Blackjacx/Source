@@ -36,7 +36,7 @@ class MultiSectionViewController: UIViewController {
         }
 
         let sections = [
-            MySection(models: [MyModel(title: "Mom"),
+            DefaultSection(models: [MyModel(title: "Mom"),
                                MyModel(title: "Dad"),
                                MyModel(title: "Brother"),
                                MyModel(title: "Mom"),
@@ -51,7 +51,7 @@ class MultiSectionViewController: UIViewController {
                       headerTitle: "Family",
                       footerTitle: nil),
 
-            MySection(models: [MyModel(title: "Apple"),
+            DefaultSection(models: [MyModel(title: "Apple"),
                                MyModel(title: "Banana"),
                                MyModel(title: "Grape"),
                                MyModel(title: "Apple"),
@@ -67,7 +67,7 @@ class MultiSectionViewController: UIViewController {
                       footerTitle: nil),
 
             // No header title -> no section index title
-            MySection(models: [MyModel(title: "Apple"),
+            DefaultSection(models: [MyModel(title: "Apple"),
                                MyModel(title: "Banana"),
                                MyModel(title: "Grape"),
                                MyModel(title: "Apple"),
@@ -82,7 +82,7 @@ class MultiSectionViewController: UIViewController {
                       headerTitle: nil,
                       footerTitle: nil),
 
-            MySection(models: [MyModel(title: "Vampire"),
+            DefaultSection(models: [MyModel(title: "Vampire"),
                                MyModel(title: "Lycan"),
                                MyModel(title: "Clown"),
                                MyModel(title: "God"),
