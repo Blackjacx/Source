@@ -19,8 +19,16 @@ public struct ModelCollection {
         }
     }
 
-    public init(with initialSections: [Section] = []) {
-        sections = initialSections
+    public init() {
+        self.sections = []
+    }
+
+    public init(sections: [Section]) {
+        self.sections = sections
+    }
+
+    public init(models: [ViewModel]) {
+        self.sections = [DefaultSection(models: models)]
     }
 
     public var sectionCount: Int {

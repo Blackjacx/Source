@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.0.7] - 2019-08-09
+* [#15](https://github.com/Blackjacx/Source/pull/15): Add additional initializers for ModelCollection - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.0.6] - 2019-08-09
 * [#14](https://github.com/Blackjacx/Source/pull/14): Implement removal functionality on ModelCollection - [@Blackjacx](https://github.com/blackjacx).
 
