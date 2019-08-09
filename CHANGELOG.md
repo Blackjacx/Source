@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Fix hiding last N separators - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.3] - 2019-08-09
 * Implement possibility to hide last N separators - [@Blackjacx](https://github.com/blackjacx).

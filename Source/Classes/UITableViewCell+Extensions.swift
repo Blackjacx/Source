@@ -12,12 +12,21 @@ public extension UITableViewCell {
 
     // Adjusting the separator insets: http://stackoverflow.com/a/39005773/971329
     func adjustCellSeparatorInsets(at indexPath: IndexPath,
-                                   for modelCollection: ModelCollection) {
+                                   for modelCollection: ModelCollection,
+                                   numberOfLastSeparatorsToHide: Int) {
 
         guard modelCollection.isInBounds(indexPath) else { return }
 
-        let item = modelCollection[indexPath]
-        let insets = item.separatorInsets
+        let model = modelCollection[indexPath]
+        var insets = model.separatorInsets
+
+        // Don't show the separator for the last N rows of the last section
+        let lastSection = modelCollection[modelCollection.sectionCount-1]
+        if indexPath.section == modelCollection.sectionCount-1
+            && indexPath.row >= lastSection.count - numberOfLastSeparatorsToHide {
+
+            insets = NSDirectionalEdgeInsets(top: 0, leading: 9999, bottom: 0, trailing: 0)
+        }
 
         // removing separator inset
         separatorInset = insets.edgeInsets
