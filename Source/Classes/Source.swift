@@ -30,6 +30,15 @@ public final class Source: NSObject {
 
     public var dataSourceDidChangedClosure: DataSourceDidChangedClosure?
 
+    public let numberOfLastSeparatorsToHide: Int
+
+    // MARK: - Lifecycle
+
+    public init(numberOfLastSeparatorsToHide: Int = 1) {
+
+        self.numberOfLastSeparatorsToHide = numberOfLastSeparatorsToHide
+    }
+
     public func registerCells(for table: UITableView) {
         collection.allModels.forEach {
             table.register($0.cellType, forCellReuseIdentifier: $0.cellType.reuseIdentifier)

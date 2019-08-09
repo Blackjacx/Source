@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Implement possibility to hide last N separators - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.2] - 2019-08-07
 * Rename invalidViewModel > invalidModel - [@Blackjacx](https://github.com/blackjacx).
