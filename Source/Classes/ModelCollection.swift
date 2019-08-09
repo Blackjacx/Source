@@ -60,6 +60,15 @@ public struct ModelCollection {
         sections.append(section)
     }
 
+    public mutating func removeSection(at index: Int) {
+        sections.remove(at: index)
+    }
+
+    public mutating func removeRow(at indexPath: IndexPath) {
+        guard isInBounds(indexPath) else { return }
+        sections[indexPath.section].remove(at: indexPath.row)
+    }
+
     public subscript(index: Int) -> Section {
         return sections[index]
     }
