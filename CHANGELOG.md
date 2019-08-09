@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+* Use customized cells so the separator inset works correctly - [@Blackjacx](https://github.com/blackjacx).
+* Call adjustCellSeparatorInsets in all Examples - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.4] - 2019-08-09
 * Fix hiding last N separators - [@Blackjacx](https://github.com/blackjacx).
