@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Reusable protocol to seamlessly provide a cellid.
 public protocol Reusable {
     static var reuseIdentifier: String {get}
 }
