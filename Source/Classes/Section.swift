@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol Section {
-    var models: [ViewModel] { get }
+    var models: [ViewModel] { get set }
     var headerTitle: String? { get }
     var footerTitle: String? { get }
 }
@@ -20,10 +20,15 @@ public extension Section {
     subscript(index: Int) -> ViewModel {
         return models[index]
     }
+
+    mutating func remove(at index: Int) {
+        guard index < models.count else { return }
+        models.remove(at: index)
+    }
 }
 
 public struct DefaultSection: Section {
-    public let models: [ViewModel]
+    public var models: [ViewModel]
     public let headerTitle: String?
     public let footerTitle: String?
 
