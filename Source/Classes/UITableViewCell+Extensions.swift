@@ -19,12 +19,12 @@ public extension UITableViewCell {
 
         let model = modelCollection[indexPath]
         var insets = model.separatorInsets
+        let lastSection = modelCollection[modelCollection.sectionCount-1]
+        let shouldHideSeparator = indexPath.section == modelCollection.sectionCount-1
+            && indexPath.row >= lastSection.count - numberOfLastSeparatorsToHide
 
         // Don't show the separator for the last N rows of the last section
-        let lastSection = modelCollection[modelCollection.sectionCount-1]
-        if indexPath.section == modelCollection.sectionCount-1
-            && indexPath.row >= lastSection.count - numberOfLastSeparatorsToHide {
-
+        if shouldHideSeparator {
             insets = NSDirectionalEdgeInsets(top: 0, leading: 9999, bottom: 0, trailing: 0)
         }
 

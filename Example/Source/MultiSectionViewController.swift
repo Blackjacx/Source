@@ -123,4 +123,11 @@ extension MultiSectionViewController: UITableViewDelegate {
         let model = dataSource.collection[indexPath]
         model.didTap?(indexPath)
     }
+
+    // Adjusting the seperator insets: http://stackoverflow.com/a/39005773/971329
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.adjustCellSeparatorInsets(at: indexPath,
+                                       for: dataSource.collection,
+                                       numberOfLastSeparatorsToHide: dataSource.numberOfLastSeparatorsToHide)
+    }
 }
