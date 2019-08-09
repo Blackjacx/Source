@@ -105,7 +105,7 @@ class MultiSectionViewController: UIViewController {
                       headerTitle: "Monsters",
                       footerTitle: nil)
         ]
-        dataSource.collection = ModelCollection(with: sections)
+        dataSource.collection = ModelCollection(sections: sections)
     }
 
     // MARK: - Actions
