@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.0.8] - 2019-08-12
+* Rename DidDeleteClosure && DidTapClosure > IndexPathClosure - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.0.7] - 2019-08-09
 * [#15](https://github.com/Blackjacx/Source/pull/15): Add additional initializers for ModelCollection - [@Blackjacx](https://github.com/blackjacx).
 

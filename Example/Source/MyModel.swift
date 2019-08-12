@@ -14,13 +14,13 @@ struct MyModel: ViewModel {
     var title: String
     var cellType: (Configurable & Reusable).Type = MyConfigurableCell.self
     var separatorInsets: NSDirectionalEdgeInsets = .zero
-    var didTap: DidTapClosure?
-    var didDelete: DidDeleteClosure?
+    var didTap: IndexPathClosure?
+    var didDelete: IndexPathClosure?
 }
 
 extension MyModel {
 
-    init(title: String, didTap: DidTapClosure? = nil, didDelete: DidDeleteClosure? = nil) {
+    init(title: String, didTap: IndexPathClosure? = nil, didDelete: IndexPathClosure? = nil) {
         self.title = title
         self.didTap = didTap
         self.didDelete = didDelete

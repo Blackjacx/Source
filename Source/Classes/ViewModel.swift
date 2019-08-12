@@ -8,15 +8,14 @@
 
 import UIKit
 
-public typealias DidTapClosure = (_ indexPath: IndexPath) -> Void
-public typealias DidDeleteClosure = (_ indexPath: IndexPath) -> Void
+public typealias IndexPathClosure = (_ indexPath: IndexPath) -> Void
 
 public protocol ViewModel {
     var id: String { get }
     var cellType: (Configurable & Reusable).Type { get }
     var separatorInsets: NSDirectionalEdgeInsets { get }
-    var didTap: DidTapClosure? { get }
-    var didDelete: DidDeleteClosure? { get }
+    var didTap: IndexPathClosure? { get }
+    var didDelete: IndexPathClosure? { get }
 }
 
 public func ==(lhs: ViewModel, rhs: ViewModel) -> Bool {
