@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.1.0] - 2019-09-17
 * [#16](https://github.com/Blackjacx/Source/pull/16): Add SPM Support - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.0.8] - 2019-08-12
