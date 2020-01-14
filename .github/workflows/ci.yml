@@ -1,0 +1,52 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+
+name: CI
+on: [push]
+
+jobs:
+  test:
+  
+    runs-on: macOS-latest
+  
+  steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      
+      - name: Cache RubyGems
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gem-
+      
+      - name: Cache Mint packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.MINT_PATH }}
+          key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
+          restore-keys: ${{ runner.os }}-mint-
+      
+      - name: Install dependencies
+        run: sh ./bootstrap.sh
+      
+      - name: Run tests
+        run: bundle exec fastlane test framework:"Source"
+        
+    env:
+      MINT_PATH: ${{ github.workspace }}/mint
