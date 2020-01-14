@@ -1,5 +1,10 @@
 name: CI
 on: [push, pull_request]
+env:
+  FASTLANE_XCODE_LIST_TIMEOUT: 120
+  FASTLANE_WORK_DIR: .
+  MINT_PATH: ${{ github.workspace }}/mint
+  
 jobs:
   bootstrap:
     name: Bootstrap
@@ -31,7 +36,3 @@ jobs:
         run: bundle exec fastlane test framework:"Source"
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    env:
-      FASTLANE_XCODE_LIST_TIMEOUT: 120
-      FASTLANE_WORK_DIR: .
-      MINT_PATH: ${{ github.workspace }}/mint
