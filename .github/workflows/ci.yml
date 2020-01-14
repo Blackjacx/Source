@@ -27,6 +27,6 @@ jobs:
       - name: Install dependencies
         run: sh ./bootstrap.sh
       - name: Run tests
-        run: bundle exec fastlane test framework:"Source"
+        run: bundle exec fastlane test framework:"Source" run_danger:'${{ github.event.name }}'
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
