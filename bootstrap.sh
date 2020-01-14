@@ -32,3 +32,7 @@ if [ -e "Gemfile" ]; then
   bundle config set deployment 'true';
   bundle install || echo "failed to install bundle";
 fi
+
+# Download files using curl
+curl https://raw.githubusercontent.com/Blackjacx/Scripts/master/Dangerfile --output Dangerfile
+curl https://raw.githubusercontent.com/Blackjacx/Scripts/master/.swiftlint.yml --output .swiftlint.yml
