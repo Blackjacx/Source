@@ -1,7 +1,8 @@
 name: CI
 on: [push, pull_request]
 jobs:
-  test:
+  bootstrap:
+    name: Bootstrap
     runs-on: macOS-latest
     steps:
       - name: Checkout
@@ -20,6 +21,12 @@ jobs:
           restore-keys: ${{ runner.os }}-mint-
       - name: Install dependencies
         run: sh ./bootstrap.sh
+
+  test:
+    name: Test
+    runs-on: macOS-latest
+    needs: bootstrap
+    steps:      
       - name: Run tests
         run: bundle exec fastlane test framework:"Source"
         env:
