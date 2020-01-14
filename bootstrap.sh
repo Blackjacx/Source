@@ -36,3 +36,6 @@ fi
 # Download files using curl
 curl -v https://raw.githubusercontent.com/Blackjacx/Scripts/master/Dangerfile -o Dangerfile
 curl -v  https://raw.githubusercontent.com/Blackjacx/Scripts/master/.swiftlint.yml -o .swiftlint.yml
+
+ls -la
+cat Dangerfile
