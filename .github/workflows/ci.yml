@@ -23,4 +23,6 @@ jobs:
       - name: Run tests
         run: bundle exec fastlane test framework:"Source"
     env:
+      FASTLANE_XCODE_LIST_TIMEOUT: 120
+      FASTLANE_WORK_DIR: .
       MINT_PATH: ${{ github.workspace }}/mint
