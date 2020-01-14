@@ -1,7 +1,7 @@
 name: CI
 on: [push, pull_request]
 env:
-  FASTLANE_XCODE_LIST_TIMEOUT: 120
+  FASTLANE_XCODE_LIST_TIMEOUT: 999
   FASTLANE_WORK_DIR: .
   MINT_PATH: ${{ github.workspace }}/mint
 
