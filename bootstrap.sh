@@ -34,5 +34,5 @@ if [ -e "Gemfile" ]; then
 fi
 
 # Download files using curl
-curl https://raw.githubusercontent.com/Blackjacx/Scripts/master/Dangerfile --output Dangerfile
-curl https://raw.githubusercontent.com/Blackjacx/Scripts/master/.swiftlint.yml --output .swiftlint.yml
+curl -v https://raw.githubusercontent.com/Blackjacx/Scripts/master/Dangerfile -o Dangerfile
+curl -v  https://raw.githubusercontent.com/Blackjacx/Scripts/master/.swiftlint.yml -o .swiftlint.yml
