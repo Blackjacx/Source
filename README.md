@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/Blackjacx/Source/actions?query=workflow%3ACI">
-    <img alt="CI status" src="https://github.com/blackjacx/source/workflows/CI/badge.svg?branch=develop" />
+    <img alt="CI status" src="https://github.com/blackjacx/source/workflows/CI/badge.svg" />
   </a>
 
 
