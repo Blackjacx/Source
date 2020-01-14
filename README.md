@@ -9,6 +9,9 @@
     <img alt="CI status" src="https://github.com/blackjacx/source/workflows/CI/badge.svg" />
   </a>
 
+  <a href="https://swift.org/package-manager/">
+    <img alt="Swift Package Manager Compatible" src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" />
+  </a>
 
   <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" /> 
   <img alt="Platforms" src="https://img.shields.io/cocoapods/p/Source.svg" />
@@ -18,11 +21,7 @@
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/Source.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/Source.svg" />
   <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/Source.svg" />
-  
-  <!-- <a href="https://github.com/Carthage/Carthage">
-    <img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat" />
-  </a> -->
-  
+    
   <a href="https://github.com/Blackjacx/Source/blob/develop/LICENSE?raw=true">
   <img alt="License" src="https://img.shields.io/cocoapods/l/Source.svg?style=flat" />
   </a>
@@ -42,9 +41,17 @@
 
 Tired of implementing the data sources over and over again? Want to use a lightweight solution that does not mess up your view controllers? Then this is for you! The generic data source implementation for all your view controllers, that supports UITableView, UICollectionView and NSFetchedResultsController.
 
-## Installation
+## Install
 
-Source is compatible with `iOS 10.0` or higher and builds with `Xcode 10` and `Swift 5` syntax. The framework is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+Source is compatible with `iOS 10.0` or higher and builds with `Xcode 10` and `Swift 5` syntax. 
+
+### [Swift Package Manager](https://swift.org/package-manager/)
+
+In Xcode open your target list and select your project. Click the tab `Swift Packages` and there the small `+` icon. Enter the URL of this repository, select the version you want to install - usually the preset is okay - and confirm.
+
+### [CocoaPods](http://cocoapods.org)
+
+Simply add the following line to your Podfile:
 
 ```ruby
 pod "Source"
@@ -64,7 +71,7 @@ The repo includes an example project. To run it, just type `pod try Source` in y
 
 ## Author
 
-[Stefan Herold](mailto:stefan.herold@gmail.com) • [@Blackjacxxx](https://twitter.com/Blackjacxxx)
+[Stefan Herold](mailto:stefan.herold@gmail.com) • 🐦 [@Blackjacxxx](https://twitter.com/Blackjacxxx)
 
 ## License
 
