@@ -41,12 +41,12 @@ jobs:
           path: ${{ env.MINT_PATH }}
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
-      
+
       - name: Install dependencies
         run: sh ./bootstrap.sh
       
       - name: Run tests
         run: bundle exec fastlane test framework:"Source"
-        
+
     env:
       MINT_PATH: ${{ github.workspace }}/mint
