@@ -1,7 +1,7 @@
 name: CI
 on: [push]
 jobs:
-  validate-and-test:
+  test:
     runs-on: macOS-latest
     steps:
       - name: Checkout
