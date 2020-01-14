@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#17](https://github.com/Blackjacx/Source/pull/17): Fix crash isInBounds - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.1.0] - 2019-09-17
 * [#16](https://github.com/Blackjacx/Source/pull/16): Add SPM Support - [@Blackjacx](https://github.com/blackjacx).
