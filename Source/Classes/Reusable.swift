@@ -10,11 +10,11 @@ import Foundation
 
 /// Reusable protocol to seamlessly provide a cellid.
 public protocol Reusable {
-    static var reuseIdentifier: String {get}
+    static var reuseIdentifier: String { get }
 }
 
-extension Reusable {
-    public static var reuseIdentifier: String {
-        return "\(Self.self)"
+public extension Reusable {
+    static var reuseIdentifier: String {
+        "\(Self.self)"
     }
 }

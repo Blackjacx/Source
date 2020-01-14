@@ -49,11 +49,11 @@ public final class Source: NSObject {
 extension Source: UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return collection.sectionCount
+        collection.sectionCount
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collection.rowsForSection(section)
+        collection.rowsForSection(section)
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,24 +82,18 @@ extension Source: UITableViewDataSource {
     // MARK: - Section Index Titles
 
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return collection[section].headerTitle
+        collection[section].headerTitle
     }
 
     public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return collection[section].footerTitle
+        collection[section].footerTitle
     }
 
     public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        guard useSectionIndexTitles else {return nil}
-        return collection.sectionsWithIndexTitles.compactMap { $0.indexTitle }
+        useSectionIndexTitles ? collection.sectionsWithIndexTitles.compactMap { $0.indexTitle } : nil
     }
 
     public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        return collection.sectionsWithIndexTitles[index].section
+        collection.sectionsWithIndexTitles[index].section
     }
-
-    // TODO: Implement the following datasource methods
-//    optional public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
-//    optional public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-//    optional public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
 }
