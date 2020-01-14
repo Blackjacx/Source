@@ -63,4 +63,4 @@ The repo includes an example project. To run it, just type `pod try Source` in y
 
 ## License
 
-Source is available under the MIT license. See the [LICENSE](LICENSE.md) file for more info.
+Source is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
