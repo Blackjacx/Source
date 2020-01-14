@@ -2,8 +2,17 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-+## CI
+## CI
 codesigndoc_exports
+
+# Swiftlint config file which is bootstrapped
+.swiftlint.yml
+# Danger config file which is bootstrapped
+Dangerfile
+# Bundler configuration which is bootstrapped
+.bundle
+# Bundler vendor information which is bootstrapped
+vendor
 
 ## Build generated
 build/
