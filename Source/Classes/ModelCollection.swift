@@ -44,11 +44,16 @@ public struct ModelCollection {
     }
 
     public func isInBounds(_ indexPath: IndexPath) -> Bool {
-        guard 0 <= indexPath.section && indexPath.section < sections.count else {
-            return false
-        }
-        guard 0 <= indexPath.row && indexPath.row < rowsForSection(indexPath.section) else {
-            return false
+
+        // Checking for `isEmpty` is necessary since `.section` is an alias for
+        // the internal array _indexes[0] which will crash if the indexPath is
+        // empty.
+        // See https://stackoverflow.com/a/17182239/971329
+        guard !indexPath.isEmpty,
+            0 <= indexPath.section && indexPath.section < sections.count,
+            0 <= indexPath.row && indexPath.row < rowsForSection(indexPath.section) else {
+
+                return false
         }
         return true
     }
