@@ -11,7 +11,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		B940089B22FA2A4D000E1C40 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940089A22FA2A4D000E1C40 /* MyModel.swift */; };
 		B952B72222FB1B0200B7A486 /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; };
-		B952B72322FB1B0200B7A486 /* Source.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B952B72322FB1B0200B7A486 /* Source.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9DDA3DD215CB50E00AFC409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DDA3DC215CB50E00AFC409 /* Images.xcassets */; };
 		B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DE215CB53000AFC409 /* Extensions.swift */; };
 		B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */; };
@@ -184,7 +184,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = CodingCobra;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
