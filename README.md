@@ -5,6 +5,11 @@
 <h1 align="center">Source</h1>
 
 <p align="center">
+  <a href="https://github.com/Blackjacx/Source/actions?query=workflow%3ACI">
+    <img alt="CI build success" src="https://github.com/blackjacx/source/workflows/ci/badge.svg" />
+  </a>
+
+
   <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" /> 
   <img alt="Platforms" src="https://img.shields.io/cocoapods/p/Source.svg" />
   <img alt="Xcode 10.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
