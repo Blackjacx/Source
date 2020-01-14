@@ -4,12 +4,13 @@ env:
   FASTLANE_XCODE_LIST_TIMEOUT: 120
   FASTLANE_WORK_DIR: .
   MINT_PATH: ${{ github.workspace }}/mint
-  
+
 jobs:
-  bootstrap:
-    name: Bootstrap
+  bootstrap-and-test:
+    name: Test
     runs-on: macOS-latest
-    steps:
+    needs: bootstrap
+    steps:      
       - name: Checkout
         uses: actions/checkout@v1
       - name: Cache RubyGems
@@ -26,12 +27,6 @@ jobs:
           restore-keys: ${{ runner.os }}-mint-
       - name: Install dependencies
         run: sh ./bootstrap.sh
-
-  test:
-    name: Test
-    runs-on: macOS-latest
-    needs: bootstrap
-    steps:      
       - name: Run tests
         run: bundle exec fastlane test framework:"Source"
         env:
