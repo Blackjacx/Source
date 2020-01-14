@@ -18,6 +18,6 @@ public protocol ViewModel {
     var didDelete: IndexPathClosure? { get }
 }
 
-public func ==(lhs: ViewModel, rhs: ViewModel) -> Bool {
-    return lhs.id == rhs.id
+public func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
+    lhs.id == rhs.id
 }

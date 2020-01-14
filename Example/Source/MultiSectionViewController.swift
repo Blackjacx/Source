@@ -15,7 +15,7 @@ class MultiSectionViewController: UIViewController {
     let dataSource = Source()
 
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
 
         table.dataSource = dataSource
@@ -27,6 +27,7 @@ class MultiSectionViewController: UIViewController {
         setupDataSource()
     }
 
+    // swiftlint:disable:next function_body_length
     private func setupDataSource() {
 
         dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
@@ -111,7 +112,7 @@ class MultiSectionViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func toggleSectionIndexTitles(_ sender: Any) {
-        dataSource.useSectionIndexTitles = !dataSource.useSectionIndexTitles
+        dataSource.useSectionIndexTitles.toggle()
     }
 }
 

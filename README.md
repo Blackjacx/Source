@@ -5,30 +5,27 @@
 <h1 align="center">Source</h1>
 
 <p align="center">
-  <a href="https://app.bitrise.io/app/736b307f260652e6#/builds">
-    <img alt="Build Status" src="https://app.bitrise.io/app/736b307f260652e6/status.svg?token=9QuSr9PfsuRKUo99q2Jc2w&branch=develop" />
+  <a href="https://github.com/Blackjacx/Source/actions?query=workflow%3ACI">
+    <img alt="CI status" src="https://github.com/blackjacx/source/workflows/CI/badge.svg" />
   </a>
+
+  <a href="https://swift.org/package-manager/">
+    <img alt="Swift Package Manager Compatible" src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" />
+  </a>
+
   <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" /> 
   <img alt="Platforms" src="https://img.shields.io/cocoapods/p/Source.svg" />
-  <img alt="Xcode 10.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
-  <img alt="iOS 10.0+" src="https://img.shields.io/badge/iOS-10.0%2B-blue.svg" />
-  <img alt="Swift 5.0+" src="https://img.shields.io/badge/Swift-5.0%2B-orange.svg" />
+  <img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-11.0%2B-blue.svg" />
+  <img alt="iOS 11.0+" src="https://img.shields.io/badge/iOS-11.0%2B-blue.svg" />
+  <img alt="Swift 5.1+" src="https://img.shields.io/badge/Swift-5.1%2B-orange.svg" />
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/Source.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/Source.svg" />
   <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/Source.svg" />
-  
-  <!-- <a href="https://github.com/Carthage/Carthage">
-    <img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat" />
-  </a> -->
-  
+    
   <a href="https://github.com/Blackjacx/Source/blob/develop/LICENSE?raw=true">
   <img alt="License" src="https://img.shields.io/cocoapods/l/Source.svg?style=flat" />
   </a>
   
-  <a href="https://codecov.io/gh/blackjacx/Source">
-  <img alt="Codecov" src="https://codecov.io/gh/blackjacx/Source/branch/develop/graph/badge.svg" />
-  </a>
-
   <a href="https://codebeat.co/projects/github-com-blackjacx-source-develop">
   <img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" />
   </a>  
@@ -44,9 +41,17 @@
 
 Tired of implementing the data sources over and over again? Want to use a lightweight solution that does not mess up your view controllers? Then this is for you! The generic data source implementation for all your view controllers, that supports UITableView, UICollectionView and NSFetchedResultsController.
 
-## Installation
+## Install
 
-Source is compatible with `iOS 10.0` or higher and builds with `Xcode 10` and `Swift 5` syntax. The framework is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+Source is compatible with `iOS 11.0` or higher and builds with `Xcode 11` and `Swift 5.1` syntax. 
+
+### [Swift Package Manager](https://swift.org/package-manager/)
+
+In Xcode open your target list and select your project. Click the tab `Swift Packages` and there the small `+` icon. Enter the URL of this repository, select the version you want to install - usually the preset is okay - and confirm.
+
+### [CocoaPods](http://cocoapods.org)
+
+Simply add the following line to your Podfile:
 
 ```ruby
 pod "Source"
@@ -66,8 +71,8 @@ The repo includes an example project. To run it, just type `pod try Source` in y
 
 ## Author
 
-[Stefan Herold](mailto:stefan.herold@gmail.com) • [@Blackjacxxx](https://twitter.com/Blackjacxxx)
+[Stefan Herold](mailto:stefan.herold@gmail.com) • 🐦 [@Blackjacxxx](https://twitter.com/Blackjacxxx)
 
 ## License
 
-Source is available under the MIT license. See the [LICENSE](LICENSE.md) file for more info.
+Source is available under the MIT license. See the [LICENSE](LICENSE) file for more info.

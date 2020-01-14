@@ -15,11 +15,9 @@ public protocol Section {
 }
 
 public extension Section {
-    var count: Int { return models.count }
+    var count: Int { models.count }
 
-    subscript(index: Int) -> ViewModel {
-        return models[index]
-    }
+    subscript(index: Int) -> ViewModel { models[index] }
 
     mutating func remove(at index: Int) {
         guard index < models.count else { return }
