@@ -5,9 +5,6 @@
 <h1 align="center">Source</h1>
 
 <p align="center">
-  <a href="https://app.bitrise.io/app/736b307f260652e6#/builds">
-    <img alt="Build Status" src="https://app.bitrise.io/app/736b307f260652e6/status.svg?token=9QuSr9PfsuRKUo99q2Jc2w&branch=develop" />
-  </a>
   <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" /> 
   <img alt="Platforms" src="https://img.shields.io/cocoapods/p/Source.svg" />
   <img alt="Xcode 10.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
