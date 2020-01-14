@@ -21,7 +21,8 @@ class MyDisclosureCell: UITableViewCell {
         setupLayoutConstraints()
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable, message: "init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -38,7 +39,6 @@ class MyDisclosureCell: UITableViewCell {
         NSLayoutConstraint.activate(constraints)
     }
 }
-
 
 extension MyDisclosureCell: Configurable, Reusable {
 

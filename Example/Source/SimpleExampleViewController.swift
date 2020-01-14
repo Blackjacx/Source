@@ -15,12 +15,12 @@ class SimpleExampleViewController: UIViewController {
     let dataSource = Source()
 
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
 
         table.dataSource = dataSource
         table.delegate = self
-        
+
         table.tableFooterView = UIView()
         table.addMaximizedTo(view)
 

@@ -15,7 +15,7 @@ class SingleSectionViewController: UIViewController {
     let dataSource = Source()
 
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
 
         table.dataSource = dataSource

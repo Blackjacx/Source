@@ -13,8 +13,8 @@ public struct ModelCollection {
     private var sections: [Section]
 
     var sectionsWithIndexTitles: [(section: Int, indexTitle: String)] {
-        return sections.enumerated().compactMap {
-            guard let title = $0.element.headerTitle else {return nil}
+        sections.enumerated().compactMap {
+            guard let title = $0.element.headerTitle else { return nil }
             return ($0.offset, title)
         }
     }
@@ -32,15 +32,15 @@ public struct ModelCollection {
     }
 
     public var sectionCount: Int {
-        return sections.count
+        sections.count
     }
 
     public var allModels: [ViewModel] {
-        return sections.flatMap { $0.models }
+        sections.flatMap { $0.models }
     }
 
     public func rowsForSection(_ section: Int) -> Int {
-        return sections[section].count
+        sections[section].count
     }
 
     public func isInBounds(_ indexPath: IndexPath) -> Bool {
@@ -60,10 +60,8 @@ public struct ModelCollection {
 
     public func indexPath(for model: ViewModel) -> IndexPath? {
         for (sectionIndex, section) in sections.enumerated() {
-            for (rowIndex, dataSourceModel) in section.models.enumerated() {
-                if model == dataSourceModel {
-                    return IndexPath(row: rowIndex, section: sectionIndex)
-                }
+            for (rowIndex, dataSourceModel) in section.models.enumerated() where model == dataSourceModel {
+                return IndexPath(row: rowIndex, section: sectionIndex)
             }
         }
         return nil
@@ -83,10 +81,10 @@ public struct ModelCollection {
     }
 
     public subscript(index: Int) -> Section {
-        return sections[index]
+        sections[index]
     }
 
     public subscript(indexPath: IndexPath) -> ViewModel {
-        return sections[indexPath.section][indexPath.row]
+        sections[indexPath.section][indexPath.row]
     }
 }
