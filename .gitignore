@@ -5,6 +5,12 @@
 ## CI
 codesigndoc_exports
 
+#
+# Ignore files downloaded using bootstrapping
+#
+
+# bootstrap script
+bootstrap.sh
 # Swiftlint config file which is bootstrapped
 .swiftlint.yml
 # Danger config file which is bootstrapped
