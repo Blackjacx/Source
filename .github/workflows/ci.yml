@@ -12,6 +12,8 @@ jobs:
     steps:      
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Install dependencies
+        run: bash <(curl -s https://raw.githubusercontent.com/Blackjacx/Scripts/master/frameworks/bootstrap.sh)
       - name: Cache RubyGems
         uses: actions/cache@v1
         with:
@@ -24,8 +26,6 @@ jobs:
           path: ${{ env.MINT_PATH }}
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
-      - name: Install dependencies
-        run: bash <(curl -s https://raw.githubusercontent.com/Blackjacx/Scripts/master/frameworks/bootstrap.sh)
       - name: Run tests
         run: bundle exec fastlane test framework:"Source" run_danger:${{ github.event_name }}
         env: 
