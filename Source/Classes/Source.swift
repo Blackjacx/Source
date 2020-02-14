@@ -65,13 +65,12 @@ extension Source: UITableViewDataSource {
         do {
             try (cell as? Configurable)?.configure(with: model, didCalculateHeight: { [weak self] (height) in
 
-                let clampedHeight = max(height, 0)
-
-                guard self?.cellHeightCache[indexPath] != clampedHeight else { return }
-                self?.cellHeightCache[indexPath] = clampedHeight
-                tableView.beginUpdates()
-                tableView.reloadRows(at: [indexPath], with: .fade)
-                tableView.endUpdates()
+                DispatchQueue.main.async {
+                    let clampedHeight = max(height, 0)
+                    guard self?.cellHeightCache[indexPath] != clampedHeight else { return }
+                    self?.cellHeightCache[indexPath] = clampedHeight
+                    tableView.reloadData()
+                }
             })
         } catch {
             preconditionFailure("\(error)")
