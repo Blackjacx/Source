@@ -3,22 +3,22 @@
 //  Source
 //
 //  Created by Stefan Herold on 24.07.17.
-//  Copyright © 2019 CodingCobra. All rights reserved.
+//  Copyright © 2020 Stefan Herold. All rights reserved.
 //
 
 import UIKit
 import Source
 
-struct MyModel: ViewModel {
+struct CustomModel: ViewModel {
     let id: String = UUID().uuidString
     var title: String
-    var cellType: (Configurable & Reusable).Type = MyConfigurableCell.self
+    var cellType: (Configurable & Reusable).Type = DefaultCell.self
     var separatorInsets: NSDirectionalEdgeInsets = .zero
     var didTap: IndexPathClosure?
     var didDelete: IndexPathClosure?
 }
 
-extension MyModel {
+extension CustomModel {
 
     init(title: String, didTap: IndexPathClosure? = nil, didDelete: IndexPathClosure? = nil) {
         self.title = title

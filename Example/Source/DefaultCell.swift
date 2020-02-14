@@ -3,13 +3,13 @@
 //  Source
 //
 //  Created by Stefan Herold on 24.07.17.
-//  Copyright © 2019 CodingCobra. All rights reserved.
+//  Copyright © 2020 Stefan Herold. All rights reserved.
 //
 
 import UIKit
 import Source
 
-class MyConfigurableCell: UITableViewCell, Reusable {
+class DefaultCell: UITableViewCell, Reusable {
     let titleLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -18,15 +18,15 @@ class MyConfigurableCell: UITableViewCell, Reusable {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(titleLabel)
 
-        setupLayoutConstraints()
+        setupAutolayout()
     }
 
     @available(*, unavailable, message: "init(coder:) has not been implemented")
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        preconditionFailure("init(coder:) has not been implemented")
     }
 
-    private func setupLayoutConstraints() {
+    private func setupAutolayout() {
 
         let raster: CGFloat = 11
 
@@ -40,10 +40,10 @@ class MyConfigurableCell: UITableViewCell, Reusable {
     }
 }
 
-extension MyConfigurableCell: Configurable {
+extension DefaultCell: Configurable {
 
-    func configure(with model: ViewModel?) throws {
-        guard let myModel = model as? MyModel else {
+    func configure(with model: ViewModel?, didCalculateHeight: @escaping DidCalculateHeightClosure) throws {
+        guard let myModel = model as? CustomModel else {
             throw Source.Error.invalidModel(model)
         }
         titleLabel.text = myModel.title
