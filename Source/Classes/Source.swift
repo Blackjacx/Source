@@ -65,8 +65,10 @@ extension Source: UITableViewDataSource {
         do {
             try (cell as? Configurable)?.configure(with: model, didCalculateHeight: { [weak self] (height) in
 
-                guard self?.cellHeightCache[indexPath] != height else { return }
-                self?.cellHeightCache[indexPath] = height
+                let clampedHeight = max(height, 0)
+
+                guard self?.cellHeightCache[indexPath] != clampedHeight else { return }
+                self?.cellHeightCache[indexPath] = clampedHeight
                 tableView.beginUpdates()
                 tableView.reloadRows(at: [indexPath], with: .fade)
                 tableView.endUpdates()
