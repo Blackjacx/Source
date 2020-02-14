@@ -3,23 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		B940089B22FA2A4D000E1C40 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940089A22FA2A4D000E1C40 /* MyModel.swift */; };
+		B940089B22FA2A4D000E1C40 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940089A22FA2A4D000E1C40 /* CustomModel.swift */; };
 		B952B72222FB1B0200B7A486 /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; };
 		B952B72322FB1B0200B7A486 /* Source.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9DDA3DD215CB50E00AFC409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DDA3DC215CB50E00AFC409 /* Images.xcassets */; };
 		B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DE215CB53000AFC409 /* Extensions.swift */; };
 		B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */; };
 		B9DDA3E8215CB53100AFC409 /* MultiSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */; };
-		B9DDA3EB215CB53100AFC409 /* MyConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */; };
-		B9DDA3EC215CB53100AFC409 /* MyDisclosureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */; };
+		B9DDA3EB215CB53100AFC409 /* DefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E3215CB53000AFC409 /* DefaultCell.swift */; };
+		B9DDA3EC215CB53100AFC409 /* DisclosureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E4215CB53100AFC409 /* DisclosureCell.swift */; };
 		B9DDA3ED215CB53100AFC409 /* SimpleExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */; };
 		B9DDA3F2215CB58D00AFC409 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DDA3F1215CB58C00AFC409 /* LaunchScreen.xib */; };
+		B9F73F3E23F6D633007F4ECA /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F73F3D23F6D633007F4ECA /* ImageModel.swift */; };
+		B9F73F4023F6D752007F4ECA /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F73F3F23F6D752007F4ECA /* ImageCell.swift */; };
+		B9F73F4223F6D8A7007F4ECA /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F73F4123F6D8A7007F4ECA /* ImageListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,15 +56,18 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Source_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Source_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92E352A22FA4D7C00441CE0 /* Source.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Source.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B940089A22FA2A4D000E1C40 /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		B940089A22FA2A4D000E1C40 /* CustomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
 		B9DDA3DC215CB50E00AFC409 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9DDA3DE215CB53000AFC409 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSectionViewController.swift; sourceTree = "<group>"; };
 		B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSectionViewController.swift; sourceTree = "<group>"; };
-		B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConfigurableCell.swift; sourceTree = "<group>"; };
-		B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDisclosureCell.swift; sourceTree = "<group>"; };
+		B9DDA3E3215CB53000AFC409 /* DefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCell.swift; sourceTree = "<group>"; };
+		B9DDA3E4215CB53100AFC409 /* DisclosureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclosureCell.swift; sourceTree = "<group>"; };
 		B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleExampleViewController.swift; sourceTree = "<group>"; };
 		B9DDA3F1215CB58C00AFC409 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		B9F73F3D23F6D633007F4ECA /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		B9F73F3F23F6D752007F4ECA /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		B9F73F4123F6D8A7007F4ECA /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +119,14 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				B940089A22FA2A4D000E1C40 /* CustomModel.swift */,
+				B9DDA3E3215CB53000AFC409 /* DefaultCell.swift */,
+				B9DDA3E4215CB53100AFC409 /* DisclosureCell.swift */,
 				B9DDA3DE215CB53000AFC409 /* Extensions.swift */,
+				B9F73F3F23F6D752007F4ECA /* ImageCell.swift */,
+				B9F73F4123F6D8A7007F4ECA /* ImageListViewController.swift */,
+				B9F73F3D23F6D633007F4ECA /* ImageModel.swift */,
 				B9DDA3E0215CB53000AFC409 /* MultiSectionViewController.swift */,
-				B9DDA3E3215CB53000AFC409 /* MyConfigurableCell.swift */,
-				B9DDA3E4215CB53100AFC409 /* MyDisclosureCell.swift */,
-				B940089A22FA2A4D000E1C40 /* MyModel.swift */,
 				B9DDA3E5215CB53100AFC409 /* SimpleExampleViewController.swift */,
 				B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */,
 				B9DDA3DC215CB50E00AFC409 /* Images.xcassets */,
@@ -185,7 +194,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = CodingCobra;
+				ORGANIZATIONNAME = "Stefan Herold";
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -201,7 +210,7 @@
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "SourceExample" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -286,14 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F73F4223F6D8A7007F4ECA /* ImageListViewController.swift in Sources */,
 				B9DDA3ED215CB53100AFC409 /* SimpleExampleViewController.swift in Sources */,
-				B940089B22FA2A4D000E1C40 /* MyModel.swift in Sources */,
+				B940089B22FA2A4D000E1C40 /* CustomModel.swift in Sources */,
 				B9DDA3E8215CB53100AFC409 /* MultiSectionViewController.swift in Sources */,
 				B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */,
+				B9F73F3E23F6D633007F4ECA /* ImageModel.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */,
-				B9DDA3EC215CB53100AFC409 /* MyDisclosureCell.swift in Sources */,
-				B9DDA3EB215CB53100AFC409 /* MyConfigurableCell.swift in Sources */,
+				B9DDA3EC215CB53100AFC409 /* DisclosureCell.swift in Sources */,
+				B9DDA3EB215CB53100AFC409 /* DefaultCell.swift in Sources */,
+				B9F73F4023F6D752007F4ECA /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.source.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stherold.source.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -461,7 +473,7 @@
 					"@executable_path/Frameworks",
 				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.source.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stherold.source.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

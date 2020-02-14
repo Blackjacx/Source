@@ -3,7 +3,7 @@
 //  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2019 CodingCobra. All rights reserved.
+//  Copyright © 2020 Stefan Herold. All rights reserved.
 //
 
 import UIKit
@@ -29,8 +29,8 @@ public final class Source: NSObject {
     }
 
     public var dataSourceDidChangedClosure: DataSourceDidChangedClosure?
-
     public let numberOfLastSeparatorsToHide: Int
+    public private (set) var cellHeightCache: [IndexPath: CGFloat] = [:]
 
     // MARK: - Lifecycle
 
@@ -60,13 +60,19 @@ extension Source: UITableViewDataSource {
 
         let model = collection[indexPath]
         let cell = tableView.dequeueReusableCell(withIdentifier: model.cellType.reuseIdentifier, for: indexPath)
-
         cell.selectionStyle = model.didTap == nil ? .none : .default
 
         do {
-            try (cell as? Configurable)?.configure(with: model)
+            try (cell as? Configurable)?.configure(with: model, didCalculateHeight: { [weak self] (height) in
+
+                guard self?.cellHeightCache[indexPath] != height else { return }
+                self?.cellHeightCache[indexPath] = height
+                tableView.beginUpdates()
+                tableView.reloadRows(at: [indexPath], with: .fade)
+                tableView.endUpdates()
+            })
         } catch {
-            fatalError("\(error)")
+            preconditionFailure("\(error)")
         }
         return cell
     }

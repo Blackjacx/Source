@@ -3,13 +3,13 @@
 //  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2019 CodingCobra. All rights reserved.
+//  Copyright © 2020 Stefan Herold. All rights reserved.
 //
 
 import UIKit
 import Source
 
-class MultiSectionViewController: UIViewController {
+final class MultiSectionViewController: UIViewController {
 
     let table = UITableView()
     let dataSource = Source()
@@ -37,72 +37,72 @@ class MultiSectionViewController: UIViewController {
         }
 
         let sections = [
-            DefaultSection(models: [MyModel(title: "Mom"),
-                               MyModel(title: "Dad"),
-                               MyModel(title: "Brother"),
-                               MyModel(title: "Mom"),
-                               MyModel(title: "Dad"),
-                               MyModel(title: "Brother"),
-                               MyModel(title: "Mom"),
-                               MyModel(title: "Dad"),
-                               MyModel(title: "Brother"),
-                               MyModel(title: "Mom"),
-                               MyModel(title: "Dad"),
-                               MyModel(title: "Brother")],
+            DefaultSection(models: [CustomModel(title: "Mom"),
+                               CustomModel(title: "Dad"),
+                               CustomModel(title: "Brother"),
+                               CustomModel(title: "Mom"),
+                               CustomModel(title: "Dad"),
+                               CustomModel(title: "Brother"),
+                               CustomModel(title: "Mom"),
+                               CustomModel(title: "Dad"),
+                               CustomModel(title: "Brother"),
+                               CustomModel(title: "Mom"),
+                               CustomModel(title: "Dad"),
+                               CustomModel(title: "Brother")],
                       headerTitle: "Family",
                       footerTitle: nil),
 
-            DefaultSection(models: [MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape"),
-                               MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape"),
-                               MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape"),
-                               MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape")],
+            DefaultSection(models: [CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape"),
+                               CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape"),
+                               CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape"),
+                               CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape")],
                       headerTitle: "Fruits",
                       footerTitle: nil),
 
             // No header title -> no section index title
-            DefaultSection(models: [MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape"),
-                               MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape"),
-                               MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape"),
-                               MyModel(title: "Apple"),
-                               MyModel(title: "Banana"),
-                               MyModel(title: "Grape")],
+            DefaultSection(models: [CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape"),
+                               CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape"),
+                               CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape"),
+                               CustomModel(title: "Apple"),
+                               CustomModel(title: "Banana"),
+                               CustomModel(title: "Grape")],
                       headerTitle: nil,
                       footerTitle: nil),
 
-            DefaultSection(models: [MyModel(title: "Vampire"),
-                               MyModel(title: "Lycan"),
-                               MyModel(title: "Clown"),
-                               MyModel(title: "God"),
-                               MyModel(title: "Djin"),
-                               MyModel(title: "Vampire"),
-                               MyModel(title: "Lycan"),
-                               MyModel(title: "Clown"),
-                               MyModel(title: "God"),
-                               MyModel(title: "Djin"),
-                               MyModel(title: "Vampire"),
-                               MyModel(title: "Lycan"),
-                               MyModel(title: "Clown"),
-                               MyModel(title: "God"),
-                               MyModel(title: "Djin"),
-                               MyModel(title: "Vampire"),
-                               MyModel(title: "Lycan"),
-                               MyModel(title: "Clown"),
-                               MyModel(title: "God"),
-                               MyModel(title: "Djin")],
+            DefaultSection(models: [CustomModel(title: "Vampire"),
+                               CustomModel(title: "Lycan"),
+                               CustomModel(title: "Clown"),
+                               CustomModel(title: "God"),
+                               CustomModel(title: "Djin"),
+                               CustomModel(title: "Vampire"),
+                               CustomModel(title: "Lycan"),
+                               CustomModel(title: "Clown"),
+                               CustomModel(title: "God"),
+                               CustomModel(title: "Djin"),
+                               CustomModel(title: "Vampire"),
+                               CustomModel(title: "Lycan"),
+                               CustomModel(title: "Clown"),
+                               CustomModel(title: "God"),
+                               CustomModel(title: "Djin"),
+                               CustomModel(title: "Vampire"),
+                               CustomModel(title: "Lycan"),
+                               CustomModel(title: "Clown"),
+                               CustomModel(title: "God"),
+                               CustomModel(title: "Djin")],
                       headerTitle: "Monsters",
                       footerTitle: nil)
         ]
@@ -130,5 +130,9 @@ extension MultiSectionViewController: UITableViewDelegate {
         cell.adjustCellSeparatorInsets(at: indexPath,
                                        for: dataSource.collection,
                                        numberOfLastSeparatorsToHide: dataSource.numberOfLastSeparatorsToHide)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        dataSource.cellHeightCache[indexPath] ?? UITableView.automaticDimension
     }
 }

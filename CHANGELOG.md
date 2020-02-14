@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.3.0] - 2020-02-14
+* [#20](https://github.com/Blackjacx/Source/pull/20): Optional Cell Height Configuration - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.2.0] - 2020-01-14
 * [#17](https://github.com/Blackjacx/Source/pull/17): Fix crash isInBounds - [@Blackjacx](https://github.com/blackjacx).
 
