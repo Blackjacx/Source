@@ -1,5 +1,5 @@
 //
-//  MyConfigurableCell.swift
+//  MyDisclosureCell.swift
 //  Source
 //
 //  Created by Stefan Herold on 24.07.17.
@@ -9,7 +9,7 @@
 import UIKit
 import Source
 
-class DefaultCell: UITableViewCell, Reusable {
+class DisclosureCell: UITableViewCell {
     let titleLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -18,7 +18,7 @@ class DefaultCell: UITableViewCell, Reusable {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(titleLabel)
 
-        setupLayoutConstraints()
+        setupAutolayout()
     }
 
     @available(*, unavailable, message: "init(coder:) has not been implemented")
@@ -26,7 +26,7 @@ class DefaultCell: UITableViewCell, Reusable {
         preconditionFailure("init(coder:) has not been implemented")
     }
 
-    private func setupLayoutConstraints() {
+    private func setupAutolayout() {
 
         let raster: CGFloat = 11
 
@@ -40,13 +40,13 @@ class DefaultCell: UITableViewCell, Reusable {
     }
 }
 
-extension DefaultCell: Configurable {
+extension DisclosureCell: Configurable, Reusable {
 
-    func configure(with model: ViewModel?, didConfigure: @escaping DidConfigureClosure) throws {
-        guard let myModel = model as? MyModel else {
+    func configure(with model: ViewModel?, didCalculateHeight: @escaping DidCalculateHeightClosure) throws {
+        guard let myModel = model as? CustomModel else {
             throw Source.Error.invalidModel(model)
         }
         titleLabel.text = myModel.title
-        didConfigure(UITableView.automaticDimension)
+        accessoryType = .disclosureIndicator
     }
 }

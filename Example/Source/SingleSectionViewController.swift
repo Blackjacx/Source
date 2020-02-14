@@ -9,7 +9,7 @@
 import UIKit
 import Source
 
-class SingleSectionViewController: UIViewController {
+final class SingleSectionViewController: UIViewController {
 
     let table = UITableView()
     let dataSource = Source()
@@ -36,16 +36,16 @@ class SingleSectionViewController: UIViewController {
         }
 
         var models = [
-            MyModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
-            MyModel(title: "Impressung", didTap: { (sender) in print("Impressum") }),
-            MyModel(title: "Empfehlen", didTap: { (sender) in print("Empfehlen") }),
-            MyModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
-            MyModel(title: "Logout", didTap: { (sender) in print("Logout") })
+            CustomModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
+            CustomModel(title: "Impressung", didTap: { (sender) in print("Impressum") }),
+            CustomModel(title: "Empfehlen", didTap: { (sender) in print("Empfehlen") }),
+            CustomModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
+            CustomModel(title: "Logout", didTap: { (sender) in print("Logout") })
         ]
         // Changing the connected cell class for all models. Alternatively you
         // can just create a new model and set another default cell type.
         for index in 0..<models.count {
-            models[index].cellType = MyDisclosureCell.self
+            models[index].cellType = DisclosureCell.self
         }
         dataSource.collection = ModelCollection(models: models)
     }
@@ -65,5 +65,9 @@ extension SingleSectionViewController: UITableViewDelegate {
         cell.adjustCellSeparatorInsets(at: indexPath,
                                        for: dataSource.collection,
                                        numberOfLastSeparatorsToHide: dataSource.numberOfLastSeparatorsToHide)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        dataSource.cellHeightCache[indexPath] ?? UITableView.automaticDimension
     }
 }
