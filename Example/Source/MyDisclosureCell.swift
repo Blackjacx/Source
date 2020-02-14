@@ -9,7 +9,7 @@
 import UIKit
 import Source
 
-class MyDisclosureCell: UITableViewCell {
+class DisclosureCell: UITableViewCell {
     let titleLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -40,13 +40,14 @@ class MyDisclosureCell: UITableViewCell {
     }
 }
 
-extension MyDisclosureCell: Configurable, Reusable {
+extension DisclosureCell: Configurable, Reusable {
 
-    func configure(with model: ViewModel?) throws {
+    func configure(with model: ViewModel?, didConfigure: @escaping DidConfigureClosure) throws {
         guard let myModel = model as? MyModel else {
             throw Source.Error.invalidModel(model)
         }
         titleLabel.text = myModel.title
         accessoryType = .disclosureIndicator
+        didConfigure(UITableView.automaticDimension)
     }
 }

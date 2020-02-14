@@ -18,7 +18,7 @@ class DefaultCell: UITableViewCell, Reusable {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(titleLabel)
 
-        setupLayoutConstraints()
+        setupAutolayout()
     }
 
     @available(*, unavailable, message: "init(coder:) has not been implemented")
@@ -26,7 +26,7 @@ class DefaultCell: UITableViewCell, Reusable {
         preconditionFailure("init(coder:) has not been implemented")
     }
 
-    private func setupLayoutConstraints() {
+    private func setupAutolayout() {
 
         let raster: CGFloat = 11
 
@@ -42,11 +42,10 @@ class DefaultCell: UITableViewCell, Reusable {
 
 extension DefaultCell: Configurable {
 
-    func configure(with model: ViewModel?, didConfigure: @escaping DidConfigureClosure) throws {
-        guard let myModel = model as? MyModel else {
+    func configure(with model: ViewModel?, didCalculateHeight: @escaping DidCalculateHeightClosure) throws {
+        guard let myModel = model as? CustomModel else {
             throw Source.Error.invalidModel(model)
         }
         titleLabel.text = myModel.title
-        didConfigure(UITableView.automaticDimension)
     }
 }
