@@ -3,7 +3,7 @@
 //  Source
 //
 //  Created by Stefan Herold on 26.07.17.
-//  Copyright © 2019 CodingCobra. All rights reserved.
+//  Copyright © 2020 Stefan Herold. All rights reserved.
 //
 
 import UIKit
