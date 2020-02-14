@@ -66,7 +66,7 @@ extension Source: UITableViewDataSource {
         do {
             try (cell as? Configurable)?.configure(with: model)
         } catch {
-            fatalError("\(error)")
+            preconditionFailure("\(error)")
         }
         return cell
     }
