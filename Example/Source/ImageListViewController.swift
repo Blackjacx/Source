@@ -35,10 +35,10 @@ final class ImageListViewController: UIViewController {
         }
 
         let models = [
-            ImageModel(url: URL(string: "https://mcdn.wallpapersafari.com/medium/47/47/8b2sOV.jpg")!),
-            ImageModel(url: URL(string: "https://s29843.pcdn.co/blog/wp-content/uploads/sites/2/2016/11/what-is-high-res-768x570.jpg")!),
-            ImageModel(url: URL(string: "https://www.procyclinguk.com/wp-content/uploads/2015/04/2015PR.jpg")!),
-            ImageModel(url: URL(string: "https://vastphotos.com/files/uploads/photos/10430/ocean-landscape-photo-print-xl.jpg")!)
+            ImageModel(image: UIImage(named: "image1")!),
+            ImageModel(image: UIImage(named: "image2")!),
+            ImageModel(image: UIImage(named: "image3")!),
+            ImageModel(image: UIImage(named: "image4")!)
         ]
 
         let sections = [

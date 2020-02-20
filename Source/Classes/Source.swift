@@ -63,15 +63,18 @@ extension Source: UITableViewDataSource {
         cell.selectionStyle = model.didTap == nil ? .none : .default
 
         do {
-            try (cell as? Configurable)?.configure(with: model, didCalculateHeight: { [weak self] (height) in
+            try (cell as? Configurable)?.configure(with: model)
 
+            if let height = (cell as? HeightConfigurable)?.height {
                 DispatchQueue.main.async {
                     let clampedHeight = max(height, 0)
-                    guard self?.cellHeightCache[indexPath] != clampedHeight else { return }
-                    self?.cellHeightCache[indexPath] = clampedHeight
-                    tableView.reloadData()
+                    if self.cellHeightCache[indexPath] != clampedHeight {
+                        self.cellHeightCache[indexPath] = clampedHeight
+                        tableView.reloadData()
+                    }
                 }
-            })
+            }
+
         } catch {
             preconditionFailure("\(error)")
         }
