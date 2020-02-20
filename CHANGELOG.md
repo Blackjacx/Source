@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#21](https://github.com/Blackjacx/Source/pull/21): Implement HeightConfigurable Protocol - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.3.0] - 2020-02-14
 * [#20](https://github.com/Blackjacx/Source/pull/20): Optional Cell Height Configuration - [@Blackjacx](https://github.com/blackjacx).
