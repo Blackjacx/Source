@@ -10,7 +10,7 @@ import UIKit
 import Source
 
 struct ImageModel: ViewModel {
-    var url: URL
+    var image: UIImage
 
     let id: String = UUID().uuidString
     var cellType: (Configurable & Reusable).Type = ImageCell.self

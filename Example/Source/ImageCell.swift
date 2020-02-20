@@ -58,24 +58,23 @@ final class ImageCell: UITableViewCell {
     }
 }
 
-extension ImageCell: Configurable, Reusable {
+extension ImageCell: HeightConfigurable, Reusable {
 
-    func configure(with model: ViewModel?, didCalculateHeight: @escaping DidCalculateHeightClosure) throws {
+    var height: CGFloat {
+        guard let img = imgView.image else {
+            return UITableView.automaticDimension
+        }
+        let imgAspect = img.size.width / img.size.height
+        let imgViewWidth = self.contentView.frame.width - 2 * Self.paddingH
+        let imgViewHeight = imgViewWidth / imgAspect
+        return imgViewHeight + 2 * Self.paddingV
+    }
+
+    func configure(with model: ViewModel?) throws {
 
         guard let myModel = model as? ImageModel else {
             throw Source.Error.invalidModel(model)
         }
-
-        imgView.setImage(from: myModel.url, didSetImage: { [weak self] img in
-            guard let self = self, let img = img else {
-                didCalculateHeight(Self.paddingV * 2)
-                return
-            }
-            let imgAspect = img.size.width / img.size.height
-            let imgViewWidth = self.contentView.frame.width - 2 * Self.paddingH
-            let imgViewHeight = imgViewWidth / imgAspect
-
-            didCalculateHeight(imgViewHeight + 2 * Self.paddingV)
-        })
+        imgView.image = myModel.image
     }
 }

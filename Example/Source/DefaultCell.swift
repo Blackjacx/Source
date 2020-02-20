@@ -42,7 +42,7 @@ class DefaultCell: UITableViewCell, Reusable {
 
 extension DefaultCell: Configurable {
 
-    func configure(with model: ViewModel?, didCalculateHeight: @escaping DidCalculateHeightClosure) throws {
+    func configure(with model: ViewModel?) throws {
         guard let myModel = model as? CustomModel else {
             throw Source.Error.invalidModel(model)
         }
