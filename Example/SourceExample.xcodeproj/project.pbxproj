@@ -12,6 +12,7 @@
 		B940089B22FA2A4D000E1C40 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940089A22FA2A4D000E1C40 /* CustomModel.swift */; };
 		B952B72222FB1B0200B7A486 /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; };
 		B952B72322FB1B0200B7A486 /* Source.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B92E352A22FA4D7C00441CE0 /* Source.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9CCA61623FFEE2F00336857 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CCA61523FFEE2F00336857 /* DownloadManager.swift */; };
 		B9DDA3DD215CB50E00AFC409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DDA3DC215CB50E00AFC409 /* Images.xcassets */; };
 		B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DE215CB53000AFC409 /* Extensions.swift */; };
 		B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */; };
@@ -57,6 +58,7 @@
 		607FACE51AFB9204008FA782 /* Source_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Source_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92E352A22FA4D7C00441CE0 /* Source.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Source.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B940089A22FA2A4D000E1C40 /* CustomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
+		B9CCA61523FFEE2F00336857 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		B9DDA3DC215CB50E00AFC409 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9DDA3DE215CB53000AFC409 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B9DDA3DF215CB53000AFC409 /* SingleSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSectionViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				B940089A22FA2A4D000E1C40 /* CustomModel.swift */,
 				B9DDA3E3215CB53000AFC409 /* DefaultCell.swift */,
 				B9DDA3E4215CB53100AFC409 /* DisclosureCell.swift */,
+				B9CCA61523FFEE2F00336857 /* DownloadManager.swift */,
 				B9DDA3DE215CB53000AFC409 /* Extensions.swift */,
 				B9F73F3F23F6D752007F4ECA /* ImageCell.swift */,
 				B9F73F4123F6D8A7007F4ECA /* ImageListViewController.swift */,
@@ -302,6 +305,7 @@
 				B9DDA3E7215CB53100AFC409 /* SingleSectionViewController.swift in Sources */,
 				B9F73F3E23F6D633007F4ECA /* ImageModel.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B9CCA61623FFEE2F00336857 /* DownloadManager.swift in Sources */,
 				B9DDA3E6215CB53100AFC409 /* Extensions.swift in Sources */,
 				B9DDA3EC215CB53100AFC409 /* DisclosureCell.swift in Sources */,
 				B9DDA3EB215CB53100AFC409 /* DefaultCell.swift in Sources */,

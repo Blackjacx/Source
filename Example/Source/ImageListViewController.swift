@@ -14,6 +14,13 @@ final class ImageListViewController: UIViewController {
     let table = UITableView()
     let dataSource = Source()
 
+    let urls = [
+        URL(string: "https://mcdn.wallpapersafari.com/medium/47/47/8b2sOV.jpg")!,
+        URL(string: "https://s29843.pcdn.co/blog/wp-content/uploads/sites/2/2016/11/what-is-high-res-768x570.jpg")!,
+        URL(string: "https://www.procyclinguk.com/wp-content/uploads/2015/04/2015PR.jpg")!,
+        URL(string: "https://vastphotos.com/files/uploads/photos/10430/ocean-landscape-photo-print-xl.jpg")!
+    ]
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -23,10 +30,11 @@ final class ImageListViewController: UIViewController {
 
         table.addMaximizedTo(view)
 
-        setupDataSource()
+        let placeholders = Array(repeating: UIImage(named: "placeholder")!, count: urls.count)
+        setupDataSource(images: placeholders, fetchData: true)
     }
 
-    private func setupDataSource() {
+    private func setupDataSource(images: [UIImage], fetchData: Bool) {
 
         dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
             guard let self = self else { return }
@@ -34,17 +42,19 @@ final class ImageListViewController: UIViewController {
             self.table.reloadData()
         }
 
-        let models = [
-            ImageModel(image: UIImage(named: "image1")!),
-            ImageModel(image: UIImage(named: "image2")!),
-            ImageModel(image: UIImage(named: "image3")!),
-            ImageModel(image: UIImage(named: "image4")!)
-        ]
+        let models = images.map { ImageModel(image: $0) }
 
         let sections = [
             DefaultSection(models: models, headerTitle: nil, footerTitle: nil)
         ]
         dataSource.collection = ModelCollection(sections: sections)
+
+        if fetchData {
+            DownloadManager.shared.fetch(urls) { [weak self] (result) in
+                let images = result.compactMap { try? $0.get().image }
+                self?.setupDataSource(images: images, fetchData: false)
+            }
+        }
     }
 }
 
