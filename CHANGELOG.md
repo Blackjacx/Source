@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.3.4] - 2020-02-21
+* [#22](https://github.com/Blackjacx/Source/pull/22): Implement Image Download Example - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.3.3] - 2020-02-20
 * [#21](https://github.com/Blackjacx/Source/pull/21): Implement HeightConfigurable Protocol - [@Blackjacx](https://github.com/blackjacx).
 
