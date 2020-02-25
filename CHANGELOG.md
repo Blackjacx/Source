@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.3.5] - 2020-02-25
+* [#23](https://github.com/Blackjacx/Source/pull/23): Prevent clamping of auto dimension - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.3.4] - 2020-02-21
 * [#22](https://github.com/Blackjacx/Source/pull/22): Implement Image Download Example - [@Blackjacx](https://github.com/blackjacx).
 

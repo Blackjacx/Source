@@ -67,7 +67,12 @@ extension Source: UITableViewDataSource {
 
             if let height = (cell as? HeightConfigurable)?.height {
                 DispatchQueue.main.async {
-                    let clampedHeight = max(height, 0)
+                    var clampedHeight = height
+
+                    if height != UITableView.automaticDimension {
+                        clampedHeight = max(height, 0)
+                    }
+
                     if self.cellHeightCache[indexPath] != clampedHeight {
                         self.cellHeightCache[indexPath] = clampedHeight
                         tableView.reloadData()
