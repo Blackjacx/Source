@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2020-04-16
+* [#26](https://github.com/Blackjacx/Source/pull/26): Enable module stability - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.3.5] - 2020-02-25
 * [#23](https://github.com/Blackjacx/Source/pull/23): Prevent clamping of auto dimension - [@Blackjacx](https://github.com/blackjacx).
 
