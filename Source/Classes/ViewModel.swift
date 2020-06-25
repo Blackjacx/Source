@@ -14,6 +14,7 @@ public protocol ViewModel {
     var id: String { get }
     var cellType: (Configurable & Reusable).Type { get }
     var separatorInsets: NSDirectionalEdgeInsets { get }
+    var accessory: UITableViewCell.AccessoryType { get }
     var didTap: IndexPathClosure? { get }
     var didDelete: IndexPathClosure? { get }
 }
