@@ -11,7 +11,7 @@ env:
 jobs:
   bootstrap-and-test:
     name: Test
-    runs-on: macos
+    runs-on: macos-latest
     steps:      
       - name: Checkout
         uses: actions/checkout@v1
