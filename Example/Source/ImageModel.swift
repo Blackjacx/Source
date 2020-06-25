@@ -15,6 +15,7 @@ struct ImageModel: ViewModel {
     let id: String = UUID().uuidString
     var cellType: (Configurable & Reusable).Type = ImageCell.self
     var separatorInsets: NSDirectionalEdgeInsets = .zero
+    let accessory: UITableViewCell.AccessoryType = .none
     let didTap: IndexPathClosure? = nil
     let didDelete: IndexPathClosure? = nil
 }

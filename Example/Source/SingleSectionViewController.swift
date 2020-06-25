@@ -35,17 +35,19 @@ final class SingleSectionViewController: UIViewController {
             self.table.reloadData()
         }
 
+        let accessory: UITableViewCell.AccessoryType = .none
+
         var models = [
-            CustomModel(title: "Einstellungen", didTap: { (sender) in print("Einstellungen") }),
-            CustomModel(title: "Impressung", didTap: { (sender) in print("Impressum") }),
-            CustomModel(title: "Empfehlen", didTap: { (sender) in print("Empfehlen") }),
-            CustomModel(title: "Hilfe", didTap: { (sender) in print("Hilfe") }),
-            CustomModel(title: "Logout", didTap: { (sender) in print("Logout") })
+            CustomModel(title: "Einstellungen", accessory: accessory, didTap: { (sender) in print("Einstellungen") }),
+            CustomModel(title: "Impressung", accessory: accessory, didTap: { (sender) in print("Impressum") }),
+            CustomModel(title: "Empfehlen", accessory: accessory, didTap: { (sender) in print("Empfehlen") }),
+            CustomModel(title: "Hilfe", accessory: accessory, didTap: { (sender) in print("Hilfe") }),
+            CustomModel(title: "Logout", accessory: accessory, didTap: { (sender) in print("Logout") })
         ]
         // Changing the connected cell class for all models. Alternatively you
         // can just create a new model and set another default cell type.
         for index in 0..<models.count {
-            models[index].cellType = DisclosureCell.self
+            models[index].cellType = DefaultCell.self
         }
         dataSource.collection = ModelCollection(models: models)
     }

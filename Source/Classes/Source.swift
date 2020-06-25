@@ -61,6 +61,7 @@ extension Source: UITableViewDataSource {
         let model = collection[indexPath]
         let cell = tableView.dequeueReusableCell(withIdentifier: model.cellType.reuseIdentifier, for: indexPath)
         cell.selectionStyle = model.didTap == nil ? .none : .default
+        cell.accessoryType = model.accessory
 
         do {
             try (cell as? Configurable)?.configure(with: model)
