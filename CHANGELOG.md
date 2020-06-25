@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#27](https://github.com/dbdrive/beiwagen/pull/27): Add support for Accessory Type - [@stherold](https://github.com/stherold).
 
 ## [1.4.0] - 2020-04-16
 * [#26](https://github.com/Blackjacx/Source/pull/26): Enable module stability - [@Blackjacx](https://github.com/blackjacx).
