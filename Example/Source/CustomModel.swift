@@ -14,6 +14,7 @@ struct CustomModel: ViewModel {
     var title: String
     var cellType: (Configurable & Reusable).Type = DefaultCell.self
     var separatorInsets: NSDirectionalEdgeInsets = .zero
+    var accessory: UITableViewCell.AccessoryType = .none
     var didTap: IndexPathClosure?
     var didDelete: IndexPathClosure?
 }
