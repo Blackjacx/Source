@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.5.0] - 2020-06-25
 * [#27](https://github.com/dbdrive/beiwagen/pull/27): Add support for Accessory Type - [@stherold](https://github.com/stherold).
 
 ## [1.4.0] - 2020-04-16
