@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#28](https://github.com/dbdrive/beiwagen/pull/28): Add ModelCollection.insert() and Section.insert() - [@stherold](https://github.com/stherold).
 
 ## [1.5.0] - 2020-06-25
 * [#27](https://github.com/dbdrive/beiwagen/pull/27): Add support for Accessory Type - [@stherold](https://github.com/stherold).
