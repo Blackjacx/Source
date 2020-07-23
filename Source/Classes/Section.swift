@@ -19,6 +19,11 @@ public extension Section {
 
     subscript(index: Int) -> ViewModel { models[index] }
 
+    mutating func insert(item: ViewModel, at index: Int) {
+        guard index <= models.count else { return } // Use <= since we can insert at models.count without crash
+        models.insert(item, at: index)
+    }
+
     mutating func remove(at index: Int) {
         guard index < models.count else { return }
         models.remove(at: index)
