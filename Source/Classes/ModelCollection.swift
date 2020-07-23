@@ -45,13 +45,28 @@ public struct ModelCollection {
 
     public func isInBounds(_ indexPath: IndexPath) -> Bool {
 
-        // Checking for `isEmpty` is necessary since `.section` is an alias for
-        // the internal array _indexes[0] which will crash if the indexPath is
-        // empty.
-        // See https://stackoverflow.com/a/17182239/971329
+        // Checking for `isEmpty` is necessary since `.section` is an alias for the internal array _indexes[0] which
+        // will crash if the indexPath is empty. See https://stackoverflow.com/a/17182239/971329
         guard !indexPath.isEmpty,
             0 <= indexPath.section && indexPath.section < sections.count,
             0 <= indexPath.row && indexPath.row < rowsForSection(indexPath.section) else {
+
+                return false
+        }
+        return true
+    }
+
+    /// The difference to `isInBounds` is that `indexPath` can actually match sections.count and section.rows.count
+    /// since iOS can insert in array at this position without crashing.
+    /// - parameter indexPath: The indexPath for to check. Permitted values are
+    /// ([0...sections.count], [0...sections[indexPath.section].count]).
+    public func isInBoundsForInsertion(_ indexPath: IndexPath) -> Bool {
+
+        // Checking for `isEmpty` is necessary since `.section` is an alias for the internal array _indexes[0] which
+        // will crash if the indexPath is empty. See https://stackoverflow.com/a/17182239/971329
+        guard !indexPath.isEmpty,
+            0 <= indexPath.section && indexPath.section <= sections.count,
+            0 <= indexPath.row && indexPath.row <= rowsForSection(indexPath.section) else {
 
                 return false
         }
@@ -73,6 +88,11 @@ public struct ModelCollection {
 
     public mutating func removeSection(at index: Int) {
         sections.remove(at: index)
+    }
+
+    public mutating func insertRow(item: ViewModel, at indexPath: IndexPath) {
+        guard isInBoundsForInsertion(indexPath) else { return }
+        sections[indexPath.section].insert(item: item, at: indexPath.row)
     }
 
     public mutating func removeRow(at indexPath: IndexPath) {

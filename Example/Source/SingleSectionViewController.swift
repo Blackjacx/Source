@@ -11,6 +11,8 @@ import Source
 
 final class SingleSectionViewController: UIViewController {
 
+    private static let data: [String] = ["Settings", "Imprint", "Recommendation", "Help", "Logout"]
+
     let table = UITableView()
     let dataSource = Source()
 
@@ -25,6 +27,19 @@ final class SingleSectionViewController: UIViewController {
         table.addMaximizedTo(view)
 
         setupDataSource()
+
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add,
+                                        target: self,
+                                        action: #selector(onAdd(sender:)))
+        navigationItem.rightBarButtonItem = addButton
+    }
+
+    @objc func onAdd(sender: UIBarButtonItem) {
+
+        let title = Self.data.randomElement()!
+        let model = CustomModel(title: title, didTap: { (sender) in print(title) })
+        let indexPath = IndexPath(row: dataSource.collection[0].count, section: 0)
+        dataSource.collection.insertRow(item: model, at: indexPath)
     }
 
     private func setupDataSource() {
@@ -35,15 +50,10 @@ final class SingleSectionViewController: UIViewController {
             self.table.reloadData()
         }
 
-        let accessory: UITableViewCell.AccessoryType = .none
+        var models = Self.data.map { title in
+            CustomModel(title: title, accessory: .none, didTap: { (sender) in print(title) })
+        }
 
-        var models = [
-            CustomModel(title: "Einstellungen", accessory: accessory, didTap: { (sender) in print("Einstellungen") }),
-            CustomModel(title: "Impressung", accessory: accessory, didTap: { (sender) in print("Impressum") }),
-            CustomModel(title: "Empfehlen", accessory: accessory, didTap: { (sender) in print("Empfehlen") }),
-            CustomModel(title: "Hilfe", accessory: accessory, didTap: { (sender) in print("Hilfe") }),
-            CustomModel(title: "Logout", accessory: accessory, didTap: { (sender) in print("Logout") })
-        ]
         // Changing the connected cell class for all models. Alternatively you
         // can just create a new model and set another default cell type.
         for index in 0..<models.count {
