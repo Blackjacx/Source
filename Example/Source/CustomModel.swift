@@ -21,7 +21,10 @@ struct CustomModel: ViewModel {
 
 extension CustomModel {
 
-    init(title: String, didTap: IndexPathClosure? = nil, didDelete: IndexPathClosure? = nil) {
+    init(title: String,
+         didTap: IndexPathClosure? = nil,
+         didDelete: IndexPathClosure? = nil) {
+
         self.title = title
         self.didTap = didTap
         self.didDelete = didDelete
