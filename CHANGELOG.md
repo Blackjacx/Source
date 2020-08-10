@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#29](https://github.com/dbdrive/beiwagen/pull/29): Implement Custom Section Headers - [@stherold](https://github.com/stherold).
 
 ## [1.6.0] - 2020-07-23
 * [#28](https://github.com/dbdrive/beiwagen/pull/28): Add ModelCollection.insert() and Section.insert() - [@stherold](https://github.com/stherold).
