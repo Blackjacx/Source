@@ -17,7 +17,7 @@
   <img alt="Platforms" src="https://img.shields.io/cocoapods/p/Source.svg" />
   <img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-11.0%2B-blue.svg" />
   <img alt="iOS 11.0+" src="https://img.shields.io/badge/iOS-11.0%2B-blue.svg" />
-  <img alt="Swift 5.1+" src="https://img.shields.io/badge/Swift-5.1%2B-orange.svg" />
+  <img alt="Swift 5.2+" src="https://img.shields.io/badge/Swift-5.2%2B-orange.svg" />
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/Source.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/Source.svg" />
   <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/Source.svg" />
@@ -42,8 +42,6 @@
 Tired of implementing the data sources over and over again? Want to use a lightweight solution that does not mess up your view controllers? Then this is for you! The generic data source implementation for all your view controllers, that supports UITableView, UICollectionView and NSFetchedResultsController.
 
 ## Install
-
-Source is compatible with `iOS 11.0` or higher and builds with `Xcode 11` and `Swift 5.1` syntax. 
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
 
