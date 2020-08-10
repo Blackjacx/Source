@@ -10,8 +10,9 @@ import Foundation
 
 public protocol Section {
     var models: [ViewModel] { get set }
-    var headerTitle: String? { get }
-    var footerTitle: String? { get }
+    var sectionIndexTitle: String? { get set }
+    var headerModel: SupplementaryViewModel? { get set }
+    var footerModel: SupplementaryViewModel? { get set }
 }
 
 public extension Section {
@@ -32,12 +33,19 @@ public extension Section {
 
 public struct DefaultSection: Section {
     public var models: [ViewModel]
-    public let headerTitle: String?
-    public let footerTitle: String?
+    public var sectionIndexTitle: String?
+    public var headerModel: SupplementaryViewModel?
+    public var footerModel: SupplementaryViewModel?
 
-    public init(models: [ViewModel], headerTitle: String? = nil, footerTitle: String? = nil) {
+    public init(models: [ViewModel],
+                sectionIndexTitle: String? = nil,
+                headerModel: SupplementaryViewModel? = nil,
+                footerModel: SupplementaryViewModel? = nil) {
+
         self.models = models
-        self.headerTitle = headerTitle
-        self.footerTitle = footerTitle
+        self.sectionIndexTitle = sectionIndexTitle
+
+        if let headerModel = headerModel { self.headerModel = headerModel }
+        if let footerModel = footerModel { self.footerModel = footerModel }
     }
 }

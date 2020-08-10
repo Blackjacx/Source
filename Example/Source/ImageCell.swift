@@ -73,7 +73,7 @@ extension ImageCell: HeightConfigurable, Reusable {
     func configure(with model: ViewModel?) throws {
 
         guard let myModel = model as? ImageModel else {
-            throw Source.Error.invalidModel(model)
+            throw ModelError.invalidModel(model)
         }
         imgView.image = myModel.image
     }

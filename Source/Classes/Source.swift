@@ -10,11 +10,11 @@ import UIKit
 
 public typealias DataSourceDidChangedClosure = (_ dataSource: Source) -> Void
 
-public final class Source: NSObject {
+public enum ModelError<T>: Swift.Error {
+    case invalidModel(T?)
+}
 
-    public enum Error: Swift.Error {
-        case invalidModel(ViewModel?)
-    }
+public final class Source: NSObject {
 
     public var collection: ModelCollection = ModelCollection() {
         didSet {
@@ -39,9 +39,14 @@ public final class Source: NSObject {
         self.numberOfLastSeparatorsToHide = numberOfLastSeparatorsToHide
     }
 
-    public func registerCells(for table: UITableView) {
+    public func registerCellsAndSupplementaryViews(for table: UITableView) {
+
         collection.allModels.forEach {
             table.register($0.cellType, forCellReuseIdentifier: $0.cellType.reuseIdentifier)
+        }
+
+        collection.sections.compactMap(\.headerModel).forEach { (model) in
+            table.register(model.viewType, forHeaderFooterViewReuseIdentifier: model.viewType.reuseIdentifier)
         }
     }
 }
@@ -96,14 +101,6 @@ extension Source: UITableViewDataSource {
     }
 
     // MARK: - Section Index Titles
-
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        collection[section].headerTitle
-    }
-
-    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        collection[section].footerTitle
-    }
 
     public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         useSectionIndexTitles ? collection.sectionsWithIndexTitles.compactMap { $0.indexTitle } : nil

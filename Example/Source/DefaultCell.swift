@@ -44,7 +44,7 @@ extension DefaultCell: Configurable {
 
     func configure(with model: ViewModel?) throws {
         guard let myModel = model as? CustomModel else {
-            throw Source.Error.invalidModel(model)
+            throw ModelError.invalidModel(model)
         }
         titleLabel.text = myModel.title
     }

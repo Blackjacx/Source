@@ -22,3 +22,7 @@ public protocol ViewModel {
 public func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
     lhs.id == rhs.id
 }
+
+public enum ViewModelError: Swift.Error {
+    case invalidModel(ViewModel?)
+}

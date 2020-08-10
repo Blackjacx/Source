@@ -10,11 +10,11 @@ import UIKit
 
 public struct ModelCollection {
 
-    private var sections: [Section]
+    private(set) var sections: [Section]
 
     var sectionsWithIndexTitles: [(section: Int, indexTitle: String)] {
         sections.enumerated().compactMap {
-            guard let title = $0.element.headerTitle else { return nil }
+            guard let title = $0.element.headerModel?.title, !title.isEmpty else { return nil }
             return ($0.offset, title)
         }
     }
