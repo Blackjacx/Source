@@ -46,7 +46,7 @@ final class SingleSectionViewController: UIViewController {
 
         dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
             guard let self = self else { return }
-            source.registerCells(for: self.table)
+            source.registerCellsAndSupplementaryViews(for: self.table)
             self.table.reloadData()
         }
 

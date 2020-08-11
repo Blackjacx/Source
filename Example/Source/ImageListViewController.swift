@@ -38,14 +38,14 @@ final class ImageListViewController: UIViewController {
 
         dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
             guard let self = self else { return }
-            source.registerCells(for: self.table)
+            source.registerCellsAndSupplementaryViews(for: self.table)
             self.table.reloadData()
         }
 
         let models = images.map { ImageModel(image: $0) }
 
         let sections = [
-            DefaultSection(models: models, headerTitle: nil, footerTitle: nil)
+            DefaultSection(models: models)
         ]
         dataSource.collection = ModelCollection(sections: sections)
 
