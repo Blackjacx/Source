@@ -32,7 +32,7 @@ final class MultiSectionViewController: UIViewController {
 
         dataSource.dataSourceDidChangedClosure = { [weak self] (source) in
             guard let self = self else { return }
-            source.registerCells(for: self.table)
+            source.registerCellsAndSupplementaryViews(for: self.table)
             self.table.reloadData()
         }
 
@@ -49,8 +49,7 @@ final class MultiSectionViewController: UIViewController {
                                CustomModel(title: "Mom"),
                                CustomModel(title: "Dad"),
                                CustomModel(title: "Brother")],
-                      headerTitle: "Family",
-                      footerTitle: nil),
+                        headerModel: DefaultSupplementaryViewModel(title: "Family")),
 
             DefaultSection(models: [CustomModel(title: "Apple"),
                                CustomModel(title: "Banana"),
@@ -64,10 +63,9 @@ final class MultiSectionViewController: UIViewController {
                                CustomModel(title: "Apple"),
                                CustomModel(title: "Banana"),
                                CustomModel(title: "Grape")],
-                      headerTitle: "Fruits",
-                      footerTitle: nil),
+                      headerModel: DefaultSupplementaryViewModel(title: "Fruits")),
 
-            // No header title -> no section index title
+            // No header model -> no section header (estimatedHeightForHeaderInSection has to return 0 for this)
             DefaultSection(models: [CustomModel(title: "Apple"),
                                CustomModel(title: "Banana"),
                                CustomModel(title: "Grape"),
@@ -79,9 +77,7 @@ final class MultiSectionViewController: UIViewController {
                                CustomModel(title: "Grape"),
                                CustomModel(title: "Apple"),
                                CustomModel(title: "Banana"),
-                               CustomModel(title: "Grape")],
-                      headerTitle: nil,
-                      footerTitle: nil),
+                               CustomModel(title: "Grape")]),
 
             DefaultSection(models: [CustomModel(title: "Vampire"),
                                CustomModel(title: "Lycan"),
@@ -103,8 +99,7 @@ final class MultiSectionViewController: UIViewController {
                                CustomModel(title: "Clown"),
                                CustomModel(title: "God"),
                                CustomModel(title: "Djin")],
-                      headerTitle: "Monsters",
-                      footerTitle: nil)
+                      headerModel: DefaultSupplementaryViewModel(title: "Monsters"))
         ]
         dataSource.collection = ModelCollection(sections: sections)
     }
@@ -134,5 +129,28 @@ extension MultiSectionViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         dataSource.cellHeightCache[indexPath] ?? UITableView.automaticDimension
+    }
+
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        let model = dataSource.collection[section]
+
+        guard let id = model.headerModel?.viewType.reuseIdentifier else {
+            return nil
+        }
+
+        guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: id) as? ConfigurableSupplementaryView else {
+            return nil
+        }
+
+        do {
+            try view.configure(with: model.headerModel)
+        } catch {}
+
+        return view
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        dataSource.collection[section].headerModel == nil ? 0 : 50
     }
 }

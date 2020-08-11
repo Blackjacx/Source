@@ -16,6 +16,8 @@
 		B980730322FA4C0F004B2674 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98072FA22FA4C0F004B2674 /* Section.swift */; };
 		B980730422FA4C0F004B2674 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98072FB22FA4C0F004B2674 /* UITableViewCell+Extensions.swift */; };
 		B990084823FF268B00DCABE4 /* HeightConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B990084723FF268B00DCABE4 /* HeightConfigurable.swift */; };
+		B992F41B24E175D000C61FA5 /* ConfigurableSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F41A24E175D000C61FA5 /* ConfigurableSupplementaryView.swift */; };
+		B9B9744E24E18ED900E94A44 /* SupplementaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B9744D24E18ED900E94A44 /* SupplementaryViewModel.swift */; };
 		B9F73F4A23F6EEE9007F4ECA /* SourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F73F4923F6EEE9007F4ECA /* SourceTests.swift */; };
 		B9F73F4C23F6EEE9007F4ECA /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98072DE22FA4B86004B2674 /* Source.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		B98072FA22FA4C0F004B2674 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		B98072FB22FA4C0F004B2674 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		B990084723FF268B00DCABE4 /* HeightConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightConfigurable.swift; sourceTree = "<group>"; };
+		B992F41A24E175D000C61FA5 /* ConfigurableSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableSupplementaryView.swift; sourceTree = "<group>"; };
+		B9B9744D24E18ED900E94A44 /* SupplementaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryViewModel.swift; sourceTree = "<group>"; };
 		B9F73F4723F6EEE9007F4ECA /* SourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F73F4923F6EEE9007F4ECA /* SourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTests.swift; sourceTree = "<group>"; };
 		B9F73F4B23F6EEE9007F4ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,12 +132,14 @@
 			isa = PBXGroup;
 			children = (
 				B98072F622FA4C0F004B2674 /* Configurable.swift */,
+				B992F41A24E175D000C61FA5 /* ConfigurableSupplementaryView.swift */,
 				B990084723FF268B00DCABE4 /* HeightConfigurable.swift */,
 				B98072F422FA4C0F004B2674 /* ModelCollection.swift */,
 				B98072F922FA4C0F004B2674 /* NSDirectionalLayoutEdges+Extensions.swift */,
 				B98072F722FA4C0F004B2674 /* Reusable.swift */,
 				B98072FA22FA4C0F004B2674 /* Section.swift */,
 				B98072F322FA4C0F004B2674 /* Source.swift */,
+				B9B9744D24E18ED900E94A44 /* SupplementaryViewModel.swift */,
 				B98072FB22FA4C0F004B2674 /* UITableViewCell+Extensions.swift */,
 				B98072F822FA4C0F004B2674 /* ViewModel.swift */,
 			);
@@ -291,7 +297,9 @@
 				B980730022FA4C0F004B2674 /* Reusable.swift in Sources */,
 				B980730222FA4C0F004B2674 /* NSDirectionalLayoutEdges+Extensions.swift in Sources */,
 				B980730322FA4C0F004B2674 /* Section.swift in Sources */,
+				B9B9744E24E18ED900E94A44 /* SupplementaryViewModel.swift in Sources */,
 				B98072FF22FA4C0F004B2674 /* Configurable.swift in Sources */,
+				B992F41B24E175D000C61FA5 /* ConfigurableSupplementaryView.swift in Sources */,
 				B98072FC22FA4C0F004B2674 /* Source.swift in Sources */,
 				B980730422FA4C0F004B2674 /* UITableViewCell+Extensions.swift in Sources */,
 				B98072FD22FA4C0F004B2674 /* ModelCollection.swift in Sources */,
@@ -433,12 +441,12 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 21;
+				DYLIB_CURRENT_VERSION = 22;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Source/Info.plist;
@@ -472,11 +480,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 21;
+				DYLIB_CURRENT_VERSION = 22;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Source/Info.plist;
