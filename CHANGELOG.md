@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.7.0] - 2020-08-11
 * [#29](https://github.com/dbdrive/beiwagen/pull/29): Implement Custom Section Headers - [@stherold](https://github.com/stherold).
 
 ## [1.6.0] - 2020-07-23
