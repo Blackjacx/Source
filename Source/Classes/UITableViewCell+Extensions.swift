@@ -10,7 +10,6 @@ import UIKit
 
 public extension UITableViewCell {
 
-    // Adjusting the separator insets: http://stackoverflow.com/a/39005773/971329
     func adjustCellSeparatorInsets(at indexPath: IndexPath,
                                    for modelCollection: ModelCollection,
                                    numberOfLastSeparatorsToHide: Int) {
@@ -33,8 +32,5 @@ public extension UITableViewCell {
 
         // prevent the cell from inheriting the tableView's margin settings
         preservesSuperviewLayoutMargins = false
-
-        // explicitly setting cell's layout margins
-        directionalLayoutMargins = insets
     }
 }
