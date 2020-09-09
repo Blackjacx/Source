@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Source'
-  s.version          = '1.7.0'
+  s.version          = '1.7.1'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'The generic data source implementation for all your view controllers.'
   s.description      = <<-DESC

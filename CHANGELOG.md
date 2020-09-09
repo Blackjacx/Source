@@ -2,14 +2,17 @@
 
 ## [Unreleased]
 
+## [1.7.1] - 2020-09-09
+* [#31](https://github.com/dbdrive/beiwagen/pull/31): Fix Cells Separator Inset - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.7.0] - 2020-08-11
-* [#29](https://github.com/dbdrive/beiwagen/pull/29): Implement Custom Section Headers - [@stherold](https://github.com/stherold).
+* [#29](https://github.com/dbdrive/beiwagen/pull/29): Implement Custom Section Headers - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.6.0] - 2020-07-23
-* [#28](https://github.com/dbdrive/beiwagen/pull/28): Add ModelCollection.insert() and Section.insert() - [@stherold](https://github.com/stherold).
+* [#28](https://github.com/dbdrive/beiwagen/pull/28): Add ModelCollection.insert() and Section.insert() - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.5.0] - 2020-06-25
-* [#27](https://github.com/dbdrive/beiwagen/pull/27): Add support for Accessory Type - [@stherold](https://github.com/stherold).
+* [#27](https://github.com/dbdrive/beiwagen/pull/27): Add support for Accessory Type - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.4.0] - 2020-04-16
 * [#26](https://github.com/Blackjacx/Source/pull/26): Enable module stability - [@Blackjacx](https://github.com/blackjacx).
