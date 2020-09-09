@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.7.1] - 2020-09-09
 * [#31](https://github.com/dbdrive/beiwagen/pull/31): Fix Cells Separator Inset - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.7.0] - 2020-08-11
