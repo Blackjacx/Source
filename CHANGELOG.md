@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.7.2] - 2021-02-23
 * Xcode 12.4 migrations - [@blackjacx](https://github.com/blackjacx).
 * Disables SwiftLint - [@blackjacx](https://github.com/blackjacx).
 
