@@ -11,12 +11,10 @@ let package = Package(
         // .watchOS(.v3)
     ],
     products: [
-        .library(
-            name: "Source",
-            targets: ["Source"])
+        .library(name: "Source", targets: ["Source"])
     ],
     targets: [
-        .target(name: "Source", path: "Source", exclude: ["Info.plist"])
+        .target(name: "Source", path: "Source")
     ],
     swiftLanguageVersions: [.v5]
 )
