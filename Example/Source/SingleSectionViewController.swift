@@ -3,7 +3,7 @@
 //  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2020 Stefan Herold. All rights reserved.
+//  Copyright © 2021 Stefan Herold. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ final class SingleSectionViewController: UIViewController {
     private static let data: [String] = ["Settings", "Imprint", "Recommendation", "Help", "Logout"]
 
     let table = UITableView()
-    let dataSource = Source()
+    let dataSource = DataSource()
 
     override func viewDidLoad() {
 

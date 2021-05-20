@@ -3,12 +3,12 @@
 //  Source
 //
 //  Created by Stefan Herold on 24.07.17.
-//  Copyright © 2020 Stefan Herold. All rights reserved.
+//  Copyright © 2021 Stefan Herold. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public protocol Configurable: class {
+public protocol Configurable: AnyObject {
 
     /// Configures your cell using a view model.
     /// - parameters:

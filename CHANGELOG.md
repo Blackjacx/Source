@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#32](https://github.com/dbdrive/beiwagen/pull/32): XCframework Compatibility - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.7.2] - 2021-02-23
 * Xcode 12.4 migrations - [@blackjacx](https://github.com/blackjacx).
