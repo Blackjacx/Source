@@ -3,7 +3,7 @@
 //  Source
 //
 //  Created by Stefan Herold on 23.07.17.
-//  Copyright © 2020 Stefan Herold. All rights reserved.
+//  Copyright © 2021 Stefan Herold. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ import Source
 final class MultiSectionViewController: UIViewController {
 
     let table = UITableView()
-    let dataSource = Source()
+    let dataSource = DataSource()
 
     override func viewDidLoad() {
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Source'
-  s.version          = '1.7.2'
+  s.version          = '1.8.0'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'The generic data source implementation for all your view controllers.'
   s.description      = <<-DESC
@@ -13,9 +13,9 @@ Tired of implementing the data sources over and over again? Want to use a lightw
   
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'Source/Classes/**/*'
+  s.source_files = 'Source/**/*'
   s.frameworks = 'UIKit'
-  s.swift_versions = ['5.3']
+  s.swift_versions = ['5.4']
 
   # s.resource_bundles = {
   #   'Resources' => ['Source/Strings/*.lproj/*.strings']

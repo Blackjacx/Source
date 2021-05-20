@@ -3,7 +3,7 @@
 //  Source_Example
 //
 //  Created by Stefan Herold on 14.02.20.
-//  Copyright © 2020 Stefan Herold. All rights reserved.
+//  Copyright © 2021 Stefan Herold. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ import Source
 final class ImageListViewController: UIViewController {
 
     let table = UITableView()
-    let dataSource = Source()
+    let dataSource = DataSource()
 
     let urls = [
         URL(string: "https://mcdn.wallpapersafari.com/medium/47/47/8b2sOV.jpg")!,

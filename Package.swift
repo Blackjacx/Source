@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.4
 
 import PackageDescription
 
@@ -11,14 +11,10 @@ let package = Package(
         // .watchOS(.v3)
     ],
     products: [
-        .library(
-            name: "Source",
-            targets: ["Source"])
+        .library(name: "Source", targets: ["Source"])
     ],
     targets: [
-        .target(
-            name: "Source",
-            path: "Source")
+        .target(name: "Source", path: "Source")
     ],
     swiftLanguageVersions: [.v5]
 )
