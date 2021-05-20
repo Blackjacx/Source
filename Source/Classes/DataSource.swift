@@ -1,5 +1,5 @@
 //
-//  Source.swift
+//  DataSource.swift
 //  Source
 //
 //  Created by Stefan Herold on 23.07.17.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-public typealias DataSourceDidChangedClosure = (_ dataSource: Source) -> Void
+public typealias DataSourceDidChangedClosure = (_ dataSource: DataSource) -> Void
 
 public enum ModelError<T>: Swift.Error {
     case invalidModel(T?)
 }
 
-public final class Source: NSObject {
+public final class DataSource: NSObject {
 
     public var collection: ModelCollection = ModelCollection() {
         didSet {
@@ -51,7 +51,7 @@ public final class Source: NSObject {
     }
 }
 
-extension Source: UITableViewDataSource {
+extension DataSource: UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
         collection.sectionCount

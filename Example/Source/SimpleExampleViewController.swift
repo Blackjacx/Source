@@ -12,7 +12,7 @@ import Source
 final class SimpleExampleViewController: UIViewController {
 
     let table = UITableView()
-    let dataSource = Source()
+    let dataSource = DataSource()
 
     override func viewDidLoad() {
 

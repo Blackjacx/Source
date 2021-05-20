@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B98072FC22FA4C0F004B2674 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98072F322FA4C0F004B2674 /* Source.swift */; };
+		B98072FC22FA4C0F004B2674 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98072F322FA4C0F004B2674 /* DataSource.swift */; };
 		B98072FD22FA4C0F004B2674 /* ModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98072F422FA4C0F004B2674 /* ModelCollection.swift */; };
 		B98072FF22FA4C0F004B2674 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98072F622FA4C0F004B2674 /* Configurable.swift */; };
 		B980730022FA4C0F004B2674 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98072F722FA4C0F004B2674 /* Reusable.swift */; };
@@ -33,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B958A9872656569700837028 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B98072D322FA4B64004B2674 /* Source.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Source.h; sourceTree = "<group>"; };
 		B98072D422FA4B64004B2674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98072DE22FA4B86004B2674 /* Source.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Source.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +43,7 @@
 		B98072E922FA4BE7004B2674 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		B98072EA22FA4BE7004B2674 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B98072EB22FA4BE7004B2674 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		B98072F322FA4C0F004B2674 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		B98072F322FA4C0F004B2674 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		B98072F422FA4C0F004B2674 /* ModelCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCollection.swift; sourceTree = "<group>"; };
 		B98072F622FA4C0F004B2674 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		B98072F722FA4C0F004B2674 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -108,11 +109,12 @@
 			isa = PBXGroup;
 			children = (
 				B98072E722FA4BE7004B2674 /* AUTHORS */,
-				B98072E822FA4BE7004B2674 /* CHANGELOG.md */,
 				B98072E922FA4BE7004B2674 /* Gemfile */,
 				B98072EB22FA4BE7004B2674 /* LICENSE */,
+				B98072E822FA4BE7004B2674 /* CHANGELOG.md */,
 				B98072EA22FA4BE7004B2674 /* README.md */,
 				B98072E622FA4BE7004B2674 /* Source.podspec */,
+				B958A9872656569700837028 /* Package.swift */,
 			);
 			name = Metadata;
 			sourceTree = "<group>";
@@ -138,7 +140,7 @@
 				B98072F922FA4C0F004B2674 /* NSDirectionalLayoutEdges+Extensions.swift */,
 				B98072F722FA4C0F004B2674 /* Reusable.swift */,
 				B98072FA22FA4C0F004B2674 /* Section.swift */,
-				B98072F322FA4C0F004B2674 /* Source.swift */,
+				B98072F322FA4C0F004B2674 /* DataSource.swift */,
 				B9B9744D24E18ED900E94A44 /* SupplementaryViewModel.swift */,
 				B98072FB22FA4C0F004B2674 /* UITableViewCell+Extensions.swift */,
 				B98072F822FA4C0F004B2674 /* ViewModel.swift */,
@@ -278,7 +280,7 @@
 				B9B9744E24E18ED900E94A44 /* SupplementaryViewModel.swift in Sources */,
 				B98072FF22FA4C0F004B2674 /* Configurable.swift in Sources */,
 				B992F41B24E175D000C61FA5 /* ConfigurableSupplementaryView.swift in Sources */,
-				B98072FC22FA4C0F004B2674 /* Source.swift in Sources */,
+				B98072FC22FA4C0F004B2674 /* DataSource.swift in Sources */,
 				B980730422FA4C0F004B2674 /* UITableViewCell+Extensions.swift in Sources */,
 				B98072FD22FA4C0F004B2674 /* ModelCollection.swift in Sources */,
 			);

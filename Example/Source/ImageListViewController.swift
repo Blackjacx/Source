@@ -12,7 +12,7 @@ import Source
 final class ImageListViewController: UIViewController {
 
     let table = UITableView()
-    let dataSource = Source()
+    let dataSource = DataSource()
 
     let urls = [
         URL(string: "https://mcdn.wallpapersafari.com/medium/47/47/8b2sOV.jpg")!,

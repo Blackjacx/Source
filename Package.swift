@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.4
 
 import PackageDescription
 
@@ -16,9 +16,7 @@ let package = Package(
             targets: ["Source"])
     ],
     targets: [
-        .target(
-            name: "Source",
-            path: "Source")
+        .target(name: "Source", path: "Source", exclude: ["Info.plist"])
     ],
     swiftLanguageVersions: [.v5]
 )

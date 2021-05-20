@@ -14,7 +14,7 @@ final class SingleSectionViewController: UIViewController {
     private static let data: [String] = ["Settings", "Imprint", "Recommendation", "Help", "Logout"]
 
     let table = UITableView()
-    let dataSource = Source()
+    let dataSource = DataSource()
 
     override func viewDidLoad() {
 
