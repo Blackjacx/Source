@@ -11,7 +11,7 @@
 <img alt="Platforms" src="https://img.shields.io/cocoapods/p/Source.svg" />
 <img alt="Xcode 13.0" src="https://img.shields.io/badge/Xcode-13.0%2B-blue.svg" />
 <img alt="iOS 11.0+" src="https://img.shields.io/badge/iOS-11.0%2B-blue.svg" />
-<img alt="Swift 5.5" src="https://img.shields.io/badge/Swift-5.4%2B-orange.svg" />
+<img alt="Swift 5.5" src="https://img.shields.io/badge/Swift-5.5%2B-orange.svg" />
 <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/Source.svg" />
 <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/Source.svg" />
 <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/Source.svg" />
