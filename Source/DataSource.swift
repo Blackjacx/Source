@@ -34,8 +34,11 @@ public final class DataSource: NSObject {
 
     // MARK: - Lifecycle
 
-    public init(numberOfLastSeparatorsToHide: Int = 1) {
+    public convenience override init() {
+        self.init(numberOfLastSeparatorsToHide: 1)
+    }
 
+    public init(numberOfLastSeparatorsToHide: Int) {
         self.numberOfLastSeparatorsToHide = numberOfLastSeparatorsToHide
     }
 
