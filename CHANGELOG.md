@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#33](https://github.com/dbdrive/beiwagen/pull/33): Make DataSource Default Init Public - [@Blackjacx](https://github.com/blackjacx).
 
 ## [1.9.0] - 2021-05-20Z
 * [#32](https://github.com/dbdrive/beiwagen/pull/32): XCframework Compatibility - [@Blackjacx](https://github.com/blackjacx).
