@@ -4,7 +4,7 @@
 
 # Source
 
-[![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacx)
+[![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacxxx)
 <a href="https://github.com/Blackjacx/Source/actions?query=workflow%3ACI"><img alt="CI status" src="https://github.com/blackjacx/source/workflows/CI/badge.svg" /></a>
 <a href="https://swift.org/package-manager/"><img alt="Swift Package Manager Compatible" src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" /></a>
 <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" /> 
