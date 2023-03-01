@@ -1,10 +1,4 @@
-<!-- <p align="center">
-<img src="./icon.png" alt="Source" height="128" width="128">
-</p> -->
-
-# Source
-
-[![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacxxx)
+[![Twitter Follow](https://img.shields.io/badge/follow-%40blackjacx-1DA1F2?logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fblackjacx&screen_name=Blackjacxxx)
 <a href="https://github.com/Blackjacx/Source/actions?query=workflow%3ACI"><img alt="CI status" src="https://github.com/blackjacx/source/workflows/CI/badge.svg" /></a>
 <a href="https://swift.org/package-manager/"><img alt="Swift Package Manager Compatible" src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" /></a>
 <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" /> 
@@ -17,7 +11,13 @@
 <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/Source.svg" />
 <a href="https://github.com/Blackjacx/Source/blob/develop/LICENSE?raw=true"><img alt="License" src="https://img.shields.io/cocoapods/l/Source.svg?style=flat" /></a>
 <a href="https://codebeat.co/projects/github-com-blackjacx-source-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" /></a>
-<a href="https://www.paypal.me/STHEROLD"><img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?logo=paypal&style=for-the-badge)](https://www.paypal.me/STHEROLD)
+
+<!-- <p align="center">
+<img src="./icon.png" alt="Source" height="128" width="128">
+</p> -->
+
+# Source
 
 Tired of implementing the data sources over and over again? Want to use a lightweight solution that does not mess up your view controllers? Then this is for you! The generic data source implementation for all your view controllers, that supports UITableView, UICollectionView and NSFetchedResultsController.
 
