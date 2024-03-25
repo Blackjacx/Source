@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.11.0] - 2024-03-25Z
 * Fix code coverage not generated issue in Xcode 15.0 - [@blackjacx](https://github.com/blackjacx).
 * Upgrade project to Xcode 15.0, Swift 5.10, iOS min deployment target 14.0 - [@blackjacx](https://github.com/blackjacx).
 
