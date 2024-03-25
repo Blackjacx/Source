@@ -6,7 +6,7 @@
 //  Copyright © 2021 Stefan Herold. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public final class DownloadManager {
 
