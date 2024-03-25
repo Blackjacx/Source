@@ -11,11 +11,11 @@ Tired of implementing the data sources over and over again? Want to use a lightw
   s.author           = { 'Stefan Herold' => 'stefan.herold@gmail.com' }
   s.source           = { :git => 'https://github.com/Blackjacx/Source.git', :tag => s.version.to_s }
   
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '14.0'
 
   s.source_files = 'Source/**/*'
   s.frameworks = 'UIKit'
-  s.swift_versions = ['5.4']
+  s.swift_versions = ['5.10']
 
   # s.resource_bundles = {
   #   'Resources' => ['Source/Strings/*.lproj/*.strings']

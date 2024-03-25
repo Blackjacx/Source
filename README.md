@@ -1,11 +1,11 @@
 [![Twitter Follow](https://img.shields.io/badge/follow-%40blackjacx-1DA1F2?logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fblackjacx&screen_name=Blackjacxxx)
 <a href="https://github.com/Blackjacx/Source/actions?query=workflow%3ACI"><img alt="CI status" src="https://github.com/blackjacx/source/workflows/CI/badge.svg" /></a>
 <a href="https://swift.org/package-manager/"><img alt="Swift Package Manager Compatible" src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" /></a>
-<img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" /> 
+<img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/Source.svg" />
 <img alt="Platforms" src="https://img.shields.io/cocoapods/p/Source.svg" />
-<img alt="Xcode 13.0" src="https://img.shields.io/badge/Xcode-13.0%2B-blue.svg" />
-<img alt="iOS 11.0+" src="https://img.shields.io/badge/iOS-11.0%2B-blue.svg" />
-<img alt="Swift 5.5" src="https://img.shields.io/badge/Swift-5.5%2B-orange.svg" />
+<img alt="Xcode 15" src="https://img.shields.io/badge/Xcode-15.0%2B-blue.svg" />
+<img alt="iOS 14.0+" src="https://img.shields.io/badge/iOS-14.0%2B-blue.svg" />
+<img alt="Swift 5.10" src="https://img.shields.io/badge/Swift-5.10%2B-orange.svg" />
 <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/Source.svg" />
 <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/Source.svg" />
 <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/Source.svg" />
