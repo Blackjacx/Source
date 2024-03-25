@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Fix code coverage not generated issue in Xcode 15.0 - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.10.0] - 2021-10-14Z
 * [#33](https://github.com/dbdrive/beiwagen/pull/33): Make DataSource Default Init Public - [@Blackjacx](https://github.com/blackjacx).
