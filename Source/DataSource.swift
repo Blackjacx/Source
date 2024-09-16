@@ -51,6 +51,10 @@ public final class DataSource: NSObject {
         collection.sections.compactMap(\.headerModel).forEach { (model) in
             table.register(model.viewType, forHeaderFooterViewReuseIdentifier: model.viewType.reuseIdentifier)
         }
+
+        collection.sections.compactMap(\.footerModel).forEach { (model) in
+            table.register(model.viewType, forHeaderFooterViewReuseIdentifier: model.viewType.reuseIdentifier)
+        }
     }
 }
 
