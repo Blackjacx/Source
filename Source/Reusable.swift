@@ -3,7 +3,7 @@
 //  Source
 //
 //  Created by Stefan Herold on 26.07.17.
-//  Copyright © 2021 Stefan Herold. All rights reserved.
+//  Copyright © 2024 Stefan Herold. All rights reserved.
 //
 
 import Foundation
