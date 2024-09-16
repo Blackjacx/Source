@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.12.0] - 2024-09-16Z
+
 - [#36](https://github.com/Blackjacx/Source/pull/36): Register footer views - [@chl-ioki](https://github.com/chl-ioki).
 
 ## [1.11.0] - 2024-03-25Z
